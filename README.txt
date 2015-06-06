@@ -1,0 +1,1 @@
+To install extract into your main KSP directory and overwrite if asked.
