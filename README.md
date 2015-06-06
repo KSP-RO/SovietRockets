@@ -1,8 +1,6 @@
-## Latest Version is 1.4
+**I HIGHLY reccommend downloading my Soviet Rockets mod to use with this. They were originlly made to work together and theserockets are needed to launch any of those probes.**
 
-So here is yet another project. This time I am working on the series of soviet probes, focusing on the luna and sputnik probes. I will also do Molniya and Polyot probes.
-
-This is a long term project and I will slowly be adding probes to it over time.
+This mod contains my rockets that were originally part of the Soviet Probes mod. I split them off into their own mod for people who only want to use the rockets.
 
 **Soyuz Picture Album:** http://imgur.com/a/4KZzU
 
