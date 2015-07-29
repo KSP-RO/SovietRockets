@@ -1,4 +1,4 @@
-**I HIGHLY reccommend downloading my Soviet Rockets, Salyut Stations and Soyuz Ferries mods to use with this.**
+**I HIGHLY reccommend downloading my Salyut Stations and Soyuz Ferries to use with this mod as all of them are made specifically for these launchers.**
 
 This mod contains my rockets that were originally part of the Soviet Probes mod. I split them off into their own mod for people who only want to use the rockets.
 
