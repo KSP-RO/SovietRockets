@@ -6,9 +6,13 @@ This mod contains my rockets that were originally part of the Soviet Probes mod.
 
 **Proton Picture Album:** http://imgur.com/a/2kWSi
 
+**Zenit-2 Picture Album:** http://imgur.com/a/PA7Lv
+
 ![alt tag](http://i.imgur.com/GuTIFjg.png)
 
 ![alt tag](http://i.imgur.com/54Xhyaj.png)
+
+![alt tag](http://i.imgur.com/7GqEHeA.png)
 
 ##Old School Fairings Support:
 * If you use old school fairings by Felbourn, here is a module manager config to make the fairings in this mod compatible: [https://www.mediafire.com/?tkyu1i4m8efuu2l](https://www.mediafire.com/?tkyu1i4m8efuu2l)
@@ -29,6 +33,8 @@ UV map texture guides are included so you can re-skin to your liking.
 * Km_Gimbal - Dtobi - License: Public Domain
 
 * R7 textures - DECQ
+
+* Some Zenit meshes - buran.ru
 
 ##License:
 
