@@ -15,10 +15,10 @@ This mod contains my rockets that were originally part of the Soviet Probes mod.
 ![alt tag](http://i.imgur.com/7GqEHeA.png)
 
 ##Old School Fairings Support:
-* If you use old school fairings by Felbourn, here is a module manager config to make the fairings in this mod compatible: [https://www.mediafire.com/?tkyu1i4m8efuu2l](https://www.mediafire.com/?tkyu1i4m8efuu2l)
+* If you use old school fairings by Felbourn, here is a module manager config to make the fairings in this mod compatible: [https://www.dropbox.com/s/a6p6pnfmf5hzrwf/RN_OSF.cfg?dl=0](https://www.dropbox.com/s/a6p6pnfmf5hzrwf/RN_OSF.cfg?dl=0)
 
 ##Remotetech Support:
-* If you use remotetech, here is a module manager config to make the fregat compatible: [https://www.mediafire.com/?3pnib4l165ly91z](https://www.mediafire.com/?3pnib4l165ly91z)
+* If you use remotetech, here is a module manager config to make the fregat compatible: [https://www.dropbox.com/s/0du6v25mj6kel5o/Soviet_Probes_RT.cfg?dl=0](https://www.dropbox.com/s/0du6v25mj6kel5o/Soviet_Probes_RT.cfg?dl=0)
 
 ##Credits:
 
