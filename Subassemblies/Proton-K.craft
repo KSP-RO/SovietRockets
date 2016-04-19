@@ -1,6 +1,6 @@
 ship = Proton-K
-version = 1.0.2
-description = Proton-K Launcher
+version = 1.1.0
+description = A Russian three-stage carrier rocket derived from the earlier Proton.
 type = None
 size = 11.012,36.93338,9.688896
 PART

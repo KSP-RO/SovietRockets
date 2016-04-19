@@ -1,15 +1,15 @@
-ship = Sputnik-8K71PS
-version = 1.0.0
-description = Sputnik launcher
+ship = Sputnik 8K71PS
+version = 1.1.0
+description = An orbital booster derived from the R-7 Semyorka ICBM.
 type = None
-size = 10.79094,41.72698,10.79095
+size = 10.79093,47.25107,10.79096
 PART
 {
-	part = r7.blok.a.sput_4292192856
+	part = rn.r7.blok.a_4293353776
 	partName = Part
-	pos = 0.1416869,27.69655,-0.1291125
+	pos = 1.190025,33.22069,4.890774
 	attPos = 0,0,0
-	attPos0 = 0.1416869,27.69655,-0.1291125
+	attPos0 = 1.190025,33.22069,4.890774
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
@@ -24,20 +24,20 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.blok.a.engine_4292192684
-	link = r7.blok.bvgd.sput_4292191946
-	link = r7.blok.bvgd.sput_4292191346
-	link = r7.blok.bvgd.sput_4292190746
-	link = r7.blok.bvgd.sput_4292190146
-	link = strutConnector_4292181128
-	link = strutConnector_4292180318
-	link = strutConnector_4292180254
-	link = strutConnector_4292180190
-	link = strutConnector_4292179658
-	link = strutConnector_4292179168
-	link = strutConnector_4292179104
-	link = strutConnector_4292179040
-	attN = bottom,r7.blok.a.engine_4292192684
+	link = rn.r7.blok.a.engine_4293353566
+	link = rn.r7.blok.bvgd_4293352820
+	link = rn.r7.blok.bvgd_4293352200
+	link = rn.r7.blok.bvgd_4293351580
+	link = rn.r7.blok.bvgd_4293350960
+	link = strutConnector_4293350340
+	link = strutConnector_4293350278
+	link = strutConnector_4293350216
+	link = strutConnector_4293350154
+	link = strutConnector_4293350092
+	link = strutConnector_4293350030
+	link = strutConnector_4293349968
+	link = strutConnector_4293349906
+	attN = bottom,rn.r7.blok.a.engine_4293353566
 	EVENTS
 	{
 	}
@@ -47,6 +47,285 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = FSmeshSwitch
+		isEnabled = True
+		selectedObject = 1
+		stagingEnabled = True
+		EVENTS
+		{
+			nextObjectEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next part variant
+				guiName = Next R7 variant
+				category = Next part variant
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousObjectEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Prev part variant
+				guiName = Prev R7 variant
+				category = Prev part variant
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 0
+		selectedTextureURL = RN_R7/master/R-7 Bottom
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Top Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Top Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 2
+		selectedTextureURL = RN_R7/master/R-7 Wait
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Middle Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Middle Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 2
+		selectedTextureURL = RN_R7/master/SPUTNIK
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Bottom Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Bottom Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -55,6 +334,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -65,14 +345,15 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.blok.a.engine_4292192684
+	part = rn.r7.blok.a.engine_4293353566
 	partName = Part
-	pos = 0.1416869,18.63368,-0.1291125
+	pos = 1.190025,24.15781,4.890774
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 0,0,0,1
@@ -80,24 +361,24 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 0
-	sidx = 0
+	sidx = 5
 	sqor = 12
 	sepI = 0
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.vernier.engine.v.fg_4292192386
-	link = r7.vernier.engine.v.fg_4292192276
-	link = r7.vernier.engine.v.fg_4292192166
-	link = r7.vernier.engine.v.fg_4292192056
-	attN = top,r7.blok.a.sput_4292192856
-	attN = 1,r7.vernier.engine.v.fg_4292192056
-	attN = 2,r7.vernier.engine.v.fg_4292192166
-	attN = 3,r7.vernier.engine.v.fg_4292192386
-	attN = 4,r7.vernier.engine.v.fg_4292192276
+	link = rn.r7.vernier.engine.v.fg_4293353268
+	link = rn.r7.vernier.engine.v.fg_4293353156
+	link = rn.r7.vernier.engine.v.fg_4293353044
+	link = rn.r7.vernier.engine.v.fg_4293352932
+	attN = top,rn.r7.blok.a_4293353776
+	attN = 1,rn.r7.vernier.engine.v.fg_4293352932
+	attN = 2,rn.r7.vernier.engine.v.fg_4293353044
+	attN = 3,rn.r7.vernier.engine.v.fg_4293353268
+	attN = 4,rn.r7.vernier.engine.v.fg_4293353156
 	EVENTS
 	{
 	}
@@ -118,6 +399,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -131,6 +413,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -142,9 +425,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -170,8 +466,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -183,6 +492,12 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -194,8 +509,45 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
+			ToggleToggles
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -211,14 +563,39 @@ PART
 			{
 				actionGroup = None
 			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -228,19 +605,21 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ReflectiveShaderModule
-		isEnabled = True
-		EVENTS
-		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -250,18 +629,19 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.04
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292192386
+	part = rn.r7.vernier.engine.v.fg_4293353268
 	partName = Part
-	pos = 0.1416869,18.17796,-1.010132
+	pos = 1.190025,23.70209,4.009754
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 0,0.7071068,0,0.7071068
@@ -269,7 +649,569 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
+	dstg = 0
+	sidx = 0
+	sqor = 12
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = rn.r7.vernier.engine.v.fg_4293353156
+	attN = top,rn.r7.blok.a.engine_4293353566
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FXModuleAnimateThrottle
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			ToggleToggles
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0.1402
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = rn.r7.vernier.engine.v.fg_4293353156
+	partName = Part
+	pos = 1.190025,23.70209,5.771804
+	attPos = 0,0,0
+	attPos0 = 0,0,0
+	rot = 0,0.7071068,0,-0.7071068
+	attRot = 0,0.7071068,0,0.7071068
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 0
+	sidx = 0
+	sqor = 12
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = rn.r7.vernier.engine.v.fg_4293353268
+	attN = top,rn.r7.blok.a.engine_4293353566
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FXModuleAnimateThrottle
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			ToggleToggles
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0.1402
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = rn.r7.vernier.engine.v.fg_4293353044
+	partName = Part
+	pos = 0.3090036,23.70209,4.890774
+	attPos = 0,0,0
+	attPos0 = 0,0,0
+	rot = 0,1,0,0
+	attRot = 0,0.9999999,0,0
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
 	dstg = 0
 	sidx = 1
 	sqor = 12
@@ -278,8 +1220,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292192276
-	attN = top,r7.blok.a.engine_4292192684
+	sym = rn.r7.vernier.engine.v.fg_4293352932
+	attN = top,rn.r7.blok.a.engine_4293353566
 	EVENTS
 	{
 	}
@@ -300,6 +1242,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -313,6 +1256,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -324,9 +1268,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -352,8 +1309,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -363,8 +1333,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -374,8 +1357,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -383,84 +1379,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -468,43 +1442,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -514,546 +1472,19 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292192276
+	part = rn.r7.vernier.engine.v.fg_4293352932
 	partName = Part
-	pos = 0.1416869,18.17796,0.751918
-	attPos = 0,0,0
-	attPos0 = 0,0,0
-	rot = 0,0.7071068,0,-0.7071068
-	attRot = 0,0.7071068,0,0.7071068
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 12
-	dstg = 0
-	sidx = 2
-	sqor = 12
-	sepI = 0
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292192386
-	attN = top,r7.blok.a.engine_4292192684
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEngines
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAlternator
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleAnimateThrottle
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = KM_Gimbal_3
-		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
-		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
-		{
-			controlEnabled = True
-		}
-		gimbalConstrain_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
-			maxValue = 100
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			toggleGimbal
-			{
-				actionGroup = None
-			}
-			plusTrimX
-			{
-				actionGroup = None
-			}
-			minusTrim
-			{
-				actionGroup = None
-			}
-			plus5Trim
-			{
-				actionGroup = None
-			}
-			minus5Trim
-			{
-				actionGroup = None
-			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
-			{
-				actionGroup = None
-			}
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = r7.vernier.engine.v.fg_4292192166
-	partName = Part
-	pos = -0.7393353,18.17796,-0.1291125
-	attPos = 0,0,0
-	attPos0 = 0,0,0
-	rot = 0,1,0,0
-	attRot = 0,0.9999999,0,0
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 12
-	dstg = 0
-	sidx = 3
-	sqor = 12
-	sepI = 0
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292192056
-	attN = top,r7.blok.a.engine_4292192684
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEngines
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAlternator
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FXModuleAnimateThrottle
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = KM_Gimbal_3
-		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
-		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
-		{
-			controlEnabled = True
-		}
-		gimbalConstrain_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
-			maxValue = 100
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			toggleGimbal
-			{
-				actionGroup = None
-			}
-			plusTrimX
-			{
-				actionGroup = None
-			}
-			minusTrim
-			{
-				actionGroup = None
-			}
-			plus5Trim
-			{
-				actionGroup = None
-			}
-			minus5Trim
-			{
-				actionGroup = None
-			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
-			{
-				actionGroup = None
-			}
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = r7.vernier.engine.v.fg_4292192056
-	partName = Part
-	pos = 1.02271,18.17796,-0.1291125
+	pos = 2.071048,23.70209,4.890774
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 0,-4.371139E-08,0,-1
@@ -1061,17 +1492,17 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 0
-	sidx = 4
+	sidx = 1
 	sqor = 12
 	sepI = 0
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292192166
-	attN = top,r7.blok.a.engine_4292192684
+	sym = rn.r7.vernier.engine.v.fg_4293353044
+	attN = top,rn.r7.blok.a.engine_4293353566
 	EVENTS
 	{
 	}
@@ -1092,6 +1523,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1105,6 +1537,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -1116,9 +1549,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1144,8 +1590,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1155,8 +1614,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1166,8 +1638,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1175,84 +1660,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1260,43 +1723,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -1306,18 +1753,19 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.blok.bvgd.sput_4292191946
+	part = rn.r7.blok.bvgd_4293352820
 	partName = Part
-	pos = -0.6818184,29.40712,-0.1291125
+	pos = 0.3665202,34.93126,4.890774
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = -1.368573E-07,0,2.612306E-06,-1
@@ -1325,7 +1773,7 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 10
+	istg = 0
 	dstg = 1
 	sidx = 0
 	sqor = 10
@@ -1334,15 +1782,15 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.bvgd.engine_4292191878
-	link = launchClamp1_4292191494
-	link = WING.R7_4292191386
-	sym = r7.blok.bvgd.sput_4292191346
-	sym = r7.blok.bvgd.sput_4292190746
-	sym = r7.blok.bvgd.sput_4292190146
-	srfN = srfAttach,r7.blok.a.sput_4292192856
-	attN = top,r7.bvgd.engine_4292191878
-	attN = wing,WING.R7_4292191386
+	link = rn.r7.bvgd.engine_4293352742
+	link = launchClamp1_4293352354
+	link = rn.WING.R7_4293352242
+	sym = rn.r7.blok.bvgd_4293352200
+	sym = rn.r7.blok.bvgd_4293351580
+	sym = rn.r7.blok.bvgd_4293350960
+	srfN = srfAttach,rn.r7.blok.a_4293353776
+	attN = top,rn.r7.bvgd.engine_4293352742
+	attN = wing,rn.WING.R7_4293352242
 	EVENTS
 	{
 	}
@@ -1358,6 +1806,7 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
+		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -1371,9 +1820,23 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Decoupler: Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1398,6 +1861,7 @@ PART
 		currentThrottle = 0.0007991415
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1411,6 +1875,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -1422,9 +1887,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1446,6 +1924,158 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 3
+		selectedTextureURL = RN_R7/master/R-7 Wait
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Top Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Top Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 3
+		selectedTextureURL = RN_R7/master/SPUTNIK
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Bottom Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Bottom Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = SolidFuel
@@ -1454,6 +2084,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -1464,6 +2095,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -1474,38 +2106,39 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.bvgd.engine_4292191878
+	part = rn.r7.bvgd.engine_4293352742
 	partName = Part
-	pos = -1.017212,18.90376,-0.1291125
+	pos = 0.03112662,24.4279,4.890774
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -6.854463E-14,-0.7071068,6.381155E-14,0.7071068
+	rot = -1.136868E-13,-0.7071068,7.105427E-15,0.7071068
 	attRot = 0,-0.7071067,0,0.7071067
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 5
+	sidx = 2
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.vernier.engine.v.fg_4292191714
-	link = r7.vernier.engine.v.fg_4292191604
-	sym = r7.bvgd.engine_4292191278
-	sym = r7.bvgd.engine_4292190678
-	sym = r7.bvgd.engine_4292190078
-	attN = top,r7.blok.bvgd.sput_4292191946
-	attN = 1,r7.vernier.engine.v.fg_4292191714
-	attN = 2,r7.vernier.engine.v.fg_4292191604
+	link = rn.r7.vernier.engine.v.fg_4293352578
+	link = rn.r7.vernier.engine.v.fg_4293352466
+	sym = rn.r7.bvgd.engine_4293352122
+	sym = rn.r7.bvgd.engine_4293351502
+	sym = rn.r7.bvgd.engine_4293350882
+	attN = top,rn.r7.blok.bvgd_4293352820
+	attN = 1,rn.r7.vernier.engine.v.fg_4293352578
+	attN = 2,rn.r7.vernier.engine.v.fg_4293352466
 	EVENTS
 	{
 	}
@@ -1526,6 +2159,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1539,6 +2173,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -1550,9 +2185,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1578,8 +2226,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1591,6 +2252,12 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -1602,8 +2269,45 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
+			ToggleToggles
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1619,14 +2323,39 @@ PART
 			{
 				actionGroup = None
 			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1636,19 +2365,21 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ReflectiveShaderModule
-		isEnabled = True
-		EVENTS
-		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1658,38 +2389,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.04
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292191714
+	part = rn.r7.vernier.engine.v.fg_4293352578
 	partName = Part
-	pos = -2.660379,18.21206,0.308468
+	pos = -1.612043,23.73619,5.328354
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -1.433362E-13,1,2.103806E-15,-3.080543E-19
+	rot = -9.094947E-13,1,-2.842171E-13,-1.436568E-18
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 6
+	sidx = 3
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292191114
-	sym = r7.vernier.engine.v.fg_4292190514
-	sym = r7.vernier.engine.v.fg_4292189914
-	attN = top,r7.bvgd.engine_4292191878
+	sym = rn.r7.vernier.engine.v.fg_4293351958
+	sym = rn.r7.vernier.engine.v.fg_4293351338
+	sym = rn.r7.vernier.engine.v.fg_4293350718
+	attN = top,rn.r7.bvgd.engine_4293352742
 	EVENTS
 	{
 	}
@@ -1710,6 +2442,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1723,6 +2456,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -1734,9 +2468,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1762,8 +2509,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1773,8 +2533,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1784,8 +2557,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1793,84 +2579,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1878,43 +2642,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -1924,38 +2672,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292191604
+	part = rn.r7.vernier.engine.v.fg_4293352466
 	partName = Part
-	pos = -2.660379,18.21206,-0.5637929
+	pos = -1.612043,23.73619,4.456092
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -1.433362E-13,1,2.103806E-15,-3.080543E-19
+	rot = -9.094947E-13,1,-2.842171E-13,-1.436568E-18
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 7
+	sidx = 4
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292191004
-	sym = r7.vernier.engine.v.fg_4292190404
-	sym = r7.vernier.engine.v.fg_4292189804
-	attN = top,r7.bvgd.engine_4292191878
+	sym = rn.r7.vernier.engine.v.fg_4293351846
+	sym = rn.r7.vernier.engine.v.fg_4293351226
+	sym = rn.r7.vernier.engine.v.fg_4293350606
+	attN = top,rn.r7.bvgd.engine_4293352742
 	EVENTS
 	{
 	}
@@ -1976,6 +2725,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1989,6 +2739,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -2000,9 +2751,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2028,8 +2792,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2039,8 +2816,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2050,8 +2840,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2059,84 +2862,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2144,43 +2925,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -2190,18 +2955,19 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = launchClamp1_4292191494
+	part = launchClamp1_4293352354
 	partName = Part
-	pos = -3.81265,18.31615,-0.1331522
+	pos = -2.764311,23.84029,4.886734
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 0.02236521,0.7068191,-0.02017123,0.706753
@@ -2209,7 +2975,7 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 11
+	istg = 1
 	dstg = 2
 	sidx = 0
 	sqor = 11
@@ -2218,10 +2984,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = launchClamp1_4292190894
-	sym = launchClamp1_4292190294
-	sym = launchClamp1_4292189694
-	srfN = srfAttach,r7.blok.bvgd.sput_4292191946
+	sym = launchClamp1_4293351734
+	sym = launchClamp1_4293351114
+	sym = launchClamp1_4293350494
+	srfN = srfAttach,rn.r7.blok.bvgd_4293352820
 	EVENTS
 	{
 	}
@@ -2235,8 +3001,9 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 7.542481
-		height = 19.03117
+		scaleFactor = 9.731827
+		height = 24.55531
+		stagingEnabled = True
 		towerRot = -0.02236521,-0.7068191,0.02017123,0.706753
 		EVENTS
 		{
@@ -2244,9 +3011,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2266,12 +3046,14 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
+		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -2283,9 +3065,22 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2311,15 +3106,78 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		stagingEnabled = True
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2332,9 +3190,9 @@ PART
 }
 PART
 {
-	part = WING.R7_4292191386
+	part = rn.WING.R7_4293352242
 	partName = Winglet
-	pos = -3.055613,18.96557,-0.1291153
+	pos = -2.007275,24.4897,4.890771
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,1.313524E-08
 	rot = 0,0,0,1
@@ -2351,10 +3209,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = WING.R7_4292190786
-	sym = WING.R7_4292190186
-	sym = WING.R7_4292189586
-	attN = top,r7.blok.bvgd.sput_4292191946
+	sym = rn.WING.R7_4293351622
+	sym = rn.WING.R7_4293351002
+	sym = rn.WING.R7_4293350382
+	attN = top,rn.r7.blok.bvgd_4293352820
 	EVENTS
 	{
 	}
@@ -2368,11 +3226,16 @@ PART
 	{
 		name = ModuleControlSurface
 		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
 		ignorePitch = False
 		ignoreYaw = False
 		ignoreRoll = False
 		deploy = False
 		deployInvert = False
+		partDeployInvert = False
+		authorityLimiter = 100
+		stagingEnabled = True
 		ignorePitch_UIFlight
 		{
 			controlEnabled = True
@@ -2393,8 +3256,31 @@ PART
 		{
 			controlEnabled = True
 		}
+		partDeployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		authorityLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = -150
+			maxValue = 150
+			stepIncrement = 0.1
+		}
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2415,9 +3301,9 @@ PART
 }
 PART
 {
-	part = r7.blok.bvgd.sput_4292191346
+	part = rn.r7.blok.bvgd_4293352200
 	partName = Part
-	pos = 0.1416869,29.40712,0.6943978
+	pos = 1.190025,34.93126,5.714284
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 1.750407E-06,-0.7071068,1.943952E-06,-0.7071068
@@ -2425,24 +3311,24 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 10
+	istg = 0
 	dstg = 1
-	sidx = 1
+	sidx = 0
 	sqor = 10
 	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.bvgd.engine_4292191278
-	link = launchClamp1_4292190894
-	link = WING.R7_4292190786
-	sym = r7.blok.bvgd.sput_4292191946
-	sym = r7.blok.bvgd.sput_4292190746
-	sym = r7.blok.bvgd.sput_4292190146
-	srfN = srfAttach,r7.blok.a.sput_4292192856
-	attN = top,r7.bvgd.engine_4292191278
-	attN = wing,WING.R7_4292190786
+	link = rn.r7.bvgd.engine_4293352122
+	link = launchClamp1_4293351734
+	link = rn.WING.R7_4293351622
+	sym = rn.r7.blok.bvgd_4293352820
+	sym = rn.r7.blok.bvgd_4293351580
+	sym = rn.r7.blok.bvgd_4293350960
+	srfN = srfAttach,rn.r7.blok.a_4293353776
+	attN = top,rn.r7.bvgd.engine_4293352122
+	attN = wing,rn.WING.R7_4293351622
 	EVENTS
 	{
 	}
@@ -2458,6 +3344,7 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
+		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -2471,9 +3358,23 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Decoupler: Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2498,6 +3399,7 @@ PART
 		currentThrottle = 0.0007991415
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -2511,6 +3413,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -2522,9 +3425,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2546,6 +3462,158 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 3
+		selectedTextureURL = RN_R7/master/R-7 Wait
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Top Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Top Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 3
+		selectedTextureURL = RN_R7/master/SPUTNIK
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Bottom Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Bottom Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = SolidFuel
@@ -2554,6 +3622,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -2564,6 +3633,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -2574,14 +3644,15 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.bvgd.engine_4292191278
+	part = rn.r7.bvgd.engine_4293352122
 	partName = Part
-	pos = 0.141684,18.90376,1.029788
+	pos = 1.190022,24.4279,6.049674
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 0,0,0,1
@@ -2589,23 +3660,23 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 8
+	sidx = 2
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.vernier.engine.v.fg_4292191114
-	link = r7.vernier.engine.v.fg_4292191004
-	sym = r7.bvgd.engine_4292191878
-	sym = r7.bvgd.engine_4292190678
-	sym = r7.bvgd.engine_4292190078
-	attN = top,r7.blok.bvgd.sput_4292191346
-	attN = 1,r7.vernier.engine.v.fg_4292191114
-	attN = 2,r7.vernier.engine.v.fg_4292191004
+	link = rn.r7.vernier.engine.v.fg_4293351958
+	link = rn.r7.vernier.engine.v.fg_4293351846
+	sym = rn.r7.bvgd.engine_4293352742
+	sym = rn.r7.bvgd.engine_4293351502
+	sym = rn.r7.bvgd.engine_4293350882
+	attN = top,rn.r7.blok.bvgd_4293352200
+	attN = 1,rn.r7.vernier.engine.v.fg_4293351958
+	attN = 2,rn.r7.vernier.engine.v.fg_4293351846
 	EVENTS
 	{
 	}
@@ -2626,6 +3697,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -2639,6 +3711,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -2650,9 +3723,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2678,8 +3764,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2691,6 +3790,12 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -2702,8 +3807,45 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
+			ToggleToggles
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2719,14 +3861,39 @@ PART
 			{
 				actionGroup = None
 			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2736,19 +3903,21 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ReflectiveShaderModule
-		isEnabled = True
-		EVENTS
-		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2758,38 +3927,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.04
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292191114
+	part = rn.r7.vernier.engine.v.fg_4293351958
 	partName = Part
-	pos = 0.5792661,18.21206,2.672961
+	pos = 1.627604,23.73619,7.69285
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -1.126997E-13,0.7071069,1.889227E-13,-0.7071069
+	rot = -2.273737E-13,0.7071069,1.136868E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 9
+	sidx = 3
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292191714
-	sym = r7.vernier.engine.v.fg_4292190514
-	sym = r7.vernier.engine.v.fg_4292189914
-	attN = top,r7.bvgd.engine_4292191278
+	sym = rn.r7.vernier.engine.v.fg_4293352578
+	sym = rn.r7.vernier.engine.v.fg_4293351338
+	sym = rn.r7.vernier.engine.v.fg_4293350718
+	attN = top,rn.r7.bvgd.engine_4293352122
 	EVENTS
 	{
 	}
@@ -2810,6 +3980,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -2823,6 +3994,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -2834,9 +4006,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2862,8 +4047,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2873,8 +4071,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2884,8 +4095,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2893,84 +4117,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2978,43 +4180,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -3024,38 +4210,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292191004
+	part = rn.r7.vernier.engine.v.fg_4293351846
 	partName = Part
-	pos = -0.2929995,18.21206,2.672961
+	pos = 0.7553379,23.73619,7.69285
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -1.126997E-13,0.7071069,1.889227E-13,-0.7071069
+	rot = -2.273737E-13,0.7071069,1.136868E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 10
+	sidx = 4
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292191604
-	sym = r7.vernier.engine.v.fg_4292190404
-	sym = r7.vernier.engine.v.fg_4292189804
-	attN = top,r7.bvgd.engine_4292191278
+	sym = rn.r7.vernier.engine.v.fg_4293352466
+	sym = rn.r7.vernier.engine.v.fg_4293351226
+	sym = rn.r7.vernier.engine.v.fg_4293350606
+	attN = top,rn.r7.bvgd.engine_4293352122
 	EVENTS
 	{
 	}
@@ -3076,6 +4263,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -3089,6 +4277,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -3100,9 +4289,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3128,8 +4330,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3139,8 +4354,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3150,8 +4378,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3159,84 +4400,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3244,43 +4463,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -3290,38 +4493,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = launchClamp1_4292190894
+	part = launchClamp1_4293351734
 	partName = Part
-	pos = 0.1376419,18.31615,3.82523
+	pos = 1.18598,23.84029,8.845119
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 0.001551382,0.9995465,-0.03007781,-4.669878E-05
+	rot = 0.001551384,0.9995464,-0.03007781,-4.670965E-05
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 11
+	istg = 1
 	dstg = 2
-	sidx = 1
+	sidx = 0
 	sqor = 11
 	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = launchClamp1_4292191494
-	sym = launchClamp1_4292190294
-	sym = launchClamp1_4292189694
-	srfN = srfAttach,r7.blok.bvgd.sput_4292191346
+	sym = launchClamp1_4293352354
+	sym = launchClamp1_4293351114
+	sym = launchClamp1_4293350494
+	srfN = srfAttach,rn.r7.blok.bvgd_4293352200
 	EVENTS
 	{
 	}
@@ -3335,18 +4539,32 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 7.542481
-		height = 19.03117
-		towerRot = -0.001551382,-0.9995463,0.0300778,-4.669877E-05
+		scaleFactor = 9.731827
+		height = 24.55531
+		stagingEnabled = True
+		towerRot = -0.001551384,-0.9995464,0.03007781,-4.670965E-05
 		EVENTS
 		{
 			Release
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3366,12 +4584,14 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
+		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -3383,9 +4603,22 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3411,15 +4644,78 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		stagingEnabled = True
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3432,12 +4728,12 @@ PART
 }
 PART
 {
-	part = WING.R7_4292190786
+	part = rn.WING.R7_4293351622
 	partName = Winglet
-	pos = 0.1416844,18.96557,3.068196
+	pos = 1.190022,24.4897,8.088085
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,1.313028E-08
-	rot = 9.612971E-14,0.7071068,6.458946E-13,0.7071068
+	rot = 6.82121E-13,0.7071068,9.947598E-13,0.7071068
 	attRot = 0,0,0,1
 	attRot0 = 1.368573E-07,1.03706E-18,-2.612306E-06,-1
 	mir = 1,1,1
@@ -3451,10 +4747,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = WING.R7_4292191386
-	sym = WING.R7_4292190186
-	sym = WING.R7_4292189586
-	attN = top,r7.blok.bvgd.sput_4292191346
+	sym = rn.WING.R7_4293352242
+	sym = rn.WING.R7_4293351002
+	sym = rn.WING.R7_4293350382
+	attN = top,rn.r7.blok.bvgd_4293352200
 	EVENTS
 	{
 	}
@@ -3468,11 +4764,16 @@ PART
 	{
 		name = ModuleControlSurface
 		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
 		ignorePitch = False
 		ignoreYaw = False
 		ignoreRoll = False
 		deploy = False
 		deployInvert = False
+		partDeployInvert = False
+		authorityLimiter = 100
+		stagingEnabled = True
 		ignorePitch_UIFlight
 		{
 			controlEnabled = True
@@ -3493,8 +4794,31 @@ PART
 		{
 			controlEnabled = True
 		}
+		partDeployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		authorityLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = -150
+			maxValue = 150
+			stepIncrement = 0.1
+		}
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3515,9 +4839,9 @@ PART
 }
 PART
 {
-	part = r7.blok.bvgd.sput_4292190746
+	part = rn.r7.blok.bvgd_4293351580
 	partName = Part
-	pos = 0.9651921,29.40712,-0.1291125
+	pos = 2.01353,34.93126,4.890774
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 2.612306E-06,-1,1.368571E-07,4.371139E-08
@@ -3525,24 +4849,24 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 10
+	istg = 0
 	dstg = 1
-	sidx = 2
+	sidx = 0
 	sqor = 10
 	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.bvgd.engine_4292190678
-	link = launchClamp1_4292190294
-	link = WING.R7_4292190186
-	sym = r7.blok.bvgd.sput_4292191946
-	sym = r7.blok.bvgd.sput_4292191346
-	sym = r7.blok.bvgd.sput_4292190146
-	srfN = srfAttach,r7.blok.a.sput_4292192856
-	attN = top,r7.bvgd.engine_4292190678
-	attN = wing,WING.R7_4292190186
+	link = rn.r7.bvgd.engine_4293351502
+	link = launchClamp1_4293351114
+	link = rn.WING.R7_4293351002
+	sym = rn.r7.blok.bvgd_4293352820
+	sym = rn.r7.blok.bvgd_4293352200
+	sym = rn.r7.blok.bvgd_4293350960
+	srfN = srfAttach,rn.r7.blok.a_4293353776
+	attN = top,rn.r7.bvgd.engine_4293351502
+	attN = wing,rn.WING.R7_4293351002
 	EVENTS
 	{
 	}
@@ -3558,6 +4882,7 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
+		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -3571,9 +4896,23 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Decoupler: Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3598,6 +4937,7 @@ PART
 		currentThrottle = 0.0007991415
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -3611,6 +4951,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -3622,9 +4963,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3646,6 +5000,158 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 3
+		selectedTextureURL = RN_R7/master/R-7 Wait
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Top Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Top Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 3
+		selectedTextureURL = RN_R7/master/SPUTNIK
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Bottom Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Bottom Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = SolidFuel
@@ -3654,6 +5160,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -3664,6 +5171,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -3674,38 +5182,39 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.bvgd.engine_4292190678
+	part = rn.r7.bvgd.engine_4293351502
 	partName = Part
-	pos = 1.300587,18.90376,-0.1291125
+	pos = 2.348926,24.4279,4.890774
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 4.815372E-14,0.7071068,5.154886E-13,0.7071068
+	rot = 2.842171E-14,0.7071068,1.023182E-12,0.7071068
 	attRot = 0,-0.7071067,0,0.7071067
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 11
+	sidx = 2
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.vernier.engine.v.fg_4292190514
-	link = r7.vernier.engine.v.fg_4292190404
-	sym = r7.bvgd.engine_4292191878
-	sym = r7.bvgd.engine_4292191278
-	sym = r7.bvgd.engine_4292190078
-	attN = top,r7.blok.bvgd.sput_4292190746
-	attN = 1,r7.vernier.engine.v.fg_4292190514
-	attN = 2,r7.vernier.engine.v.fg_4292190404
+	link = rn.r7.vernier.engine.v.fg_4293351338
+	link = rn.r7.vernier.engine.v.fg_4293351226
+	sym = rn.r7.bvgd.engine_4293352742
+	sym = rn.r7.bvgd.engine_4293352122
+	sym = rn.r7.bvgd.engine_4293350882
+	attN = top,rn.r7.blok.bvgd_4293351580
+	attN = 1,rn.r7.vernier.engine.v.fg_4293351338
+	attN = 2,rn.r7.vernier.engine.v.fg_4293351226
 	EVENTS
 	{
 	}
@@ -3726,6 +5235,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -3739,6 +5249,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -3750,9 +5261,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3778,8 +5302,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3791,6 +5328,12 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -3802,8 +5345,45 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
+			ToggleToggles
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3819,14 +5399,39 @@ PART
 			{
 				actionGroup = None
 			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3836,19 +5441,21 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ReflectiveShaderModule
-		isEnabled = True
-		EVENTS
-		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3858,38 +5465,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.04
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292190514
+	part = rn.r7.vernier.engine.v.fg_4293351338
 	partName = Part
-	pos = 2.943752,18.21206,-0.5666929
+	pos = 3.992092,23.73619,4.453193
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 2.604494E-15,-4.371139E-08,3.766921E-13,-1
+	rot = 2.131628E-13,-4.371139E-08,4.547474E-13,-1
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 12
+	sidx = 3
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292191714
-	sym = r7.vernier.engine.v.fg_4292191114
-	sym = r7.vernier.engine.v.fg_4292189914
-	attN = top,r7.bvgd.engine_4292190678
+	sym = rn.r7.vernier.engine.v.fg_4293352578
+	sym = rn.r7.vernier.engine.v.fg_4293351958
+	sym = rn.r7.vernier.engine.v.fg_4293350718
+	attN = top,rn.r7.bvgd.engine_4293351502
 	EVENTS
 	{
 	}
@@ -3910,6 +5518,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -3923,6 +5532,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -3934,9 +5544,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3962,8 +5585,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3973,8 +5609,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3984,8 +5633,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3993,84 +5655,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4078,43 +5718,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -4124,38 +5748,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292190404
+	part = rn.r7.vernier.engine.v.fg_4293351226
 	partName = Part
-	pos = 2.943752,18.21206,0.3055784
+	pos = 3.992092,23.73619,5.325465
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 2.604494E-15,-4.371139E-08,3.766921E-13,-1
+	rot = 2.131628E-13,-4.371139E-08,4.547474E-13,-1
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 13
+	sidx = 4
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292191604
-	sym = r7.vernier.engine.v.fg_4292191004
-	sym = r7.vernier.engine.v.fg_4292189804
-	attN = top,r7.bvgd.engine_4292190678
+	sym = rn.r7.vernier.engine.v.fg_4293352466
+	sym = rn.r7.vernier.engine.v.fg_4293351846
+	sym = rn.r7.vernier.engine.v.fg_4293350606
+	attN = top,rn.r7.bvgd.engine_4293351502
 	EVENTS
 	{
 	}
@@ -4176,6 +5801,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -4189,6 +5815,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -4200,9 +5827,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4228,8 +5868,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4239,8 +5892,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4250,8 +5916,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4259,84 +5938,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4344,43 +6001,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -4390,18 +6031,19 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = launchClamp1_4292190294
+	part = launchClamp1_4293351114
 	partName = Part
-	pos = 4.096025,18.31615,-0.1250622
+	pos = 5.144362,23.84029,4.894824
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = -0.02017123,0.706753,-0.02236521,-0.7068191
@@ -4409,19 +6051,19 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 11
+	istg = 1
 	dstg = 2
-	sidx = 2
+	sidx = 0
 	sqor = 11
 	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = launchClamp1_4292191494
-	sym = launchClamp1_4292190894
-	sym = launchClamp1_4292189694
-	srfN = srfAttach,r7.blok.bvgd.sput_4292190746
+	sym = launchClamp1_4293352354
+	sym = launchClamp1_4293351734
+	sym = launchClamp1_4293350494
+	srfN = srfAttach,rn.r7.blok.bvgd_4293351580
 	EVENTS
 	{
 	}
@@ -4435,8 +6077,9 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 7.542481
-		height = 19.03117
+		scaleFactor = 9.731827
+		height = 24.55531
+		stagingEnabled = True
 		towerRot = 0.02017123,-0.706753,0.02236521,-0.7068191
 		EVENTS
 		{
@@ -4444,9 +6087,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4466,12 +6122,14 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
+		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -4483,9 +6141,22 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4511,15 +6182,78 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		stagingEnabled = True
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4532,12 +6266,12 @@ PART
 }
 PART
 {
-	part = WING.R7_4292190186
+	part = rn.WING.R7_4293351002
 	partName = Winglet
-	pos = 3.338988,18.96557,-0.1291098
+	pos = 4.387327,24.4897,4.890777
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,1.314184E-08
-	rot = 5.982222E-15,1,8.476444E-14,-4.371139E-08
+	rot = -3.048336E-26,1,8.526513E-14,-4.371139E-08
 	attRot = 0,0,0,1
 	attRot0 = 1.368573E-07,2.206119E-19,-2.612306E-06,-1
 	mir = 1,1,1
@@ -4551,10 +6285,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = WING.R7_4292191386
-	sym = WING.R7_4292190786
-	sym = WING.R7_4292189586
-	attN = top,r7.blok.bvgd.sput_4292190746
+	sym = rn.WING.R7_4293352242
+	sym = rn.WING.R7_4293351622
+	sym = rn.WING.R7_4293350382
+	attN = top,rn.r7.blok.bvgd_4293351580
 	EVENTS
 	{
 	}
@@ -4568,11 +6302,16 @@ PART
 	{
 		name = ModuleControlSurface
 		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
 		ignorePitch = False
 		ignoreYaw = False
 		ignoreRoll = False
 		deploy = False
 		deployInvert = False
+		partDeployInvert = False
+		authorityLimiter = 100
+		stagingEnabled = True
 		ignorePitch_UIFlight
 		{
 			controlEnabled = True
@@ -4593,8 +6332,31 @@ PART
 		{
 			controlEnabled = True
 		}
+		partDeployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		authorityLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = -150
+			maxValue = 150
+			stepIncrement = 0.1
+		}
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4615,9 +6377,9 @@ PART
 }
 PART
 {
-	part = r7.blok.bvgd.sput_4292190146
+	part = rn.r7.blok.bvgd_4293350960
 	partName = Part
-	pos = 0.1416869,29.40712,-0.952612
+	pos = 1.190025,34.93126,4.067274
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 1.943952E-06,-0.7071068,-1.750407E-06,0.7071068
@@ -4625,24 +6387,24 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 10
+	istg = 0
 	dstg = 1
-	sidx = 3
+	sidx = 0
 	sqor = 10
 	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.bvgd.engine_4292190078
-	link = launchClamp1_4292189694
-	link = WING.R7_4292189586
-	sym = r7.blok.bvgd.sput_4292191946
-	sym = r7.blok.bvgd.sput_4292191346
-	sym = r7.blok.bvgd.sput_4292190746
-	srfN = srfAttach,r7.blok.a.sput_4292192856
-	attN = top,r7.bvgd.engine_4292190078
-	attN = wing,WING.R7_4292189586
+	link = rn.r7.bvgd.engine_4293350882
+	link = launchClamp1_4293350494
+	link = rn.WING.R7_4293350382
+	sym = rn.r7.blok.bvgd_4293352820
+	sym = rn.r7.blok.bvgd_4293352200
+	sym = rn.r7.blok.bvgd_4293351580
+	srfN = srfAttach,rn.r7.blok.a_4293353776
+	attN = top,rn.r7.bvgd.engine_4293350882
+	attN = wing,rn.WING.R7_4293350382
 	EVENTS
 	{
 	}
@@ -4658,6 +6420,7 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
+		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -4671,9 +6434,23 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Decoupler: Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4698,6 +6475,7 @@ PART
 		currentThrottle = 0.0007991415
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -4711,6 +6489,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -4722,9 +6501,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4746,6 +6538,158 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 3
+		selectedTextureURL = RN_R7/master/R-7 Wait
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Top Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Top Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 3
+		selectedTextureURL = RN_R7/master/SPUTNIK
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+			listAllObjects
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Debug: Log Objects
+				guiName = Debug: Log Objects
+				category = Debug: Log Objects
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Next Texture
+				guiName = Change Bottom Texture
+				category = Next Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			previousTextureEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Previous Texture
+				guiName = Previous Bottom Texture
+				category = Previous Texture
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			nextTextureEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Repaint
+				guiName = Repaint
+				category = Repaint
+				guiActiveUnfocused = False
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = SolidFuel
@@ -4754,6 +6698,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -4764,6 +6709,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -4774,38 +6720,39 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.bvgd.engine_4292190078
+	part = rn.r7.bvgd.engine_4293350882
 	partName = Part
-	pos = 0.1416899,18.90376,-1.288013
+	pos = 1.190028,24.4279,3.731873
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 0,1,0,1.543914E-17
+	rot = 0,1,0,-3.402707E-12
 	attRot = 0,-0.7071067,0,0.7071067
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 14
+	sidx = 2
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = r7.vernier.engine.v.fg_4292189914
-	link = r7.vernier.engine.v.fg_4292189804
-	sym = r7.bvgd.engine_4292191878
-	sym = r7.bvgd.engine_4292191278
-	sym = r7.bvgd.engine_4292190678
-	attN = top,r7.blok.bvgd.sput_4292190146
-	attN = 1,r7.vernier.engine.v.fg_4292189914
-	attN = 2,r7.vernier.engine.v.fg_4292189804
+	link = rn.r7.vernier.engine.v.fg_4293350718
+	link = rn.r7.vernier.engine.v.fg_4293350606
+	sym = rn.r7.bvgd.engine_4293352742
+	sym = rn.r7.bvgd.engine_4293352122
+	sym = rn.r7.bvgd.engine_4293351502
+	attN = top,rn.r7.blok.bvgd_4293350960
+	attN = 1,rn.r7.vernier.engine.v.fg_4293350718
+	attN = 2,rn.r7.vernier.engine.v.fg_4293350606
 	EVENTS
 	{
 	}
@@ -4826,6 +6773,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -4839,6 +6787,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -4850,9 +6799,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4878,8 +6840,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4891,6 +6866,12 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -4902,8 +6883,45 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
+			ToggleToggles
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4919,14 +6937,39 @@ PART
 			{
 				actionGroup = None
 			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4936,19 +6979,21 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ReflectiveShaderModule
-		isEnabled = True
-		EVENTS
-		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4958,38 +7003,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.04
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292189914
+	part = rn.r7.vernier.engine.v.fg_4293350718
 	partName = Part
-	pos = -0.2958913,18.21206,-2.931178
+	pos = 0.752447,23.73619,2.088706
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 1.889227E-13,-0.7071069,1.126997E-13,-0.7071069
+	rot = 2.273737E-13,-0.7071069,1.136868E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 15
+	sidx = 3
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292191714
-	sym = r7.vernier.engine.v.fg_4292191114
-	sym = r7.vernier.engine.v.fg_4292190514
-	attN = top,r7.bvgd.engine_4292190078
+	sym = rn.r7.vernier.engine.v.fg_4293352578
+	sym = rn.r7.vernier.engine.v.fg_4293351958
+	sym = rn.r7.vernier.engine.v.fg_4293351338
+	attN = top,rn.r7.bvgd.engine_4293350882
 	EVENTS
 	{
 	}
@@ -5010,6 +7056,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -5023,6 +7070,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -5034,9 +7082,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5062,8 +7123,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5073,8 +7147,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5084,8 +7171,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5093,84 +7193,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5178,43 +7256,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -5224,38 +7286,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = r7.vernier.engine.v.fg_4292189804
+	part = rn.r7.vernier.engine.v.fg_4293350606
 	partName = Part
-	pos = 0.5763744,18.21206,-2.931178
+	pos = 1.624713,23.73619,2.088706
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 1.889227E-13,-0.7071069,1.126997E-13,-0.7071069
+	rot = 2.273737E-13,-0.7071069,1.136868E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 12
+	istg = 2
 	dstg = 2
-	sidx = 16
+	sidx = 4
 	sqor = 12
 	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = r7.vernier.engine.v.fg_4292191604
-	sym = r7.vernier.engine.v.fg_4292191004
-	sym = r7.vernier.engine.v.fg_4292190404
-	attN = top,r7.bvgd.engine_4292190078
+	sym = rn.r7.vernier.engine.v.fg_4293352466
+	sym = rn.r7.vernier.engine.v.fg_4293351846
+	sym = rn.r7.vernier.engine.v.fg_4293351226
+	attN = top,rn.r7.bvgd.engine_4293350882
 	EVENTS
 	{
 	}
@@ -5276,6 +7339,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -5289,6 +7353,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -5300,9 +7365,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5328,8 +7406,21 @@ PART
 	{
 		name = ModuleAnimateHeat
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5339,8 +7430,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5350,8 +7454,21 @@ PART
 	{
 		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5359,84 +7476,62 @@ PART
 	}
 	MODULE
 	{
-		name = KM_Gimbal_3
+		name = ModuleGimbal
 		isEnabled = True
-		gimbalTransformName = gimbal
-		yawGimbalRange = 0
-		pitchGimbalRange = 20
-		debug = True
-		trimX = 0
-		trimY = 0
-		enableTrim = True
-		gimbalConstrain = 14
-		enableGimbal = True
-		enableSmoothGimbal = True
-		responseSpeed = 25
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
 		enableRoll = True
-		autoSetRoll = True
-		hideSpeedEditing = False
-		hideRollEditing = False
-		trimX_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		trimY_UIFlight
-		{
-			controlEnabled = True
-			minValue = -14
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableTrim_UIFlight
+		gimbalActive = False
+		stagingEnabled = True
+		gimbalLock_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalConstrain_UIFlight
+		gimbalLimiter_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 14
-			stepIncrement = 1
-		}
-		enableGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableSmoothGimbal_UIFlight
-		{
-			controlEnabled = True
-		}
-		responseSpeed_UIFlight
-		{
-			controlEnabled = True
-			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
+		enableYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		enablePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableRoll_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			dbg_run
-			{
-				active = True
-				guiActive = False
-				guiIcon = Toggle Debug
-				guiName = Toggle Debug
-				category = Toggle Debug
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			toggleRoll
+			ToggleToggles
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Roll
-				guiName = Deactivate Roll
-				category = Toggle Roll
+				guiActiveUncommand = False
+				guiIcon = Actuation Toggles
+				guiName = Show Actuation Toggles
+				category = Actuation Toggles
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5444,43 +7539,27 @@ PART
 		}
 		ACTIONS
 		{
-			toggleGimbal
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			plusTrimX
+			LockAction
 			{
 				actionGroup = None
 			}
-			minusTrim
+			FreeAction
 			{
 				actionGroup = None
 			}
-			plus5Trim
+			TogglePitchAction
 			{
 				actionGroup = None
 			}
-			minus5Trim
+			ToggleYawAction
 			{
 				actionGroup = None
 			}
-			plusTrimY
-			{
-				actionGroup = None
-			}
-			minusTrimY
-			{
-				actionGroup = None
-			}
-			plus5TrimY
-			{
-				actionGroup = None
-			}
-			minus5TrimY
-			{
-				actionGroup = None
-			}
-			toggleTrim
+			ToggleRollAction
 			{
 				actionGroup = None
 			}
@@ -5490,38 +7569,39 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.1402
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
 PART
 {
-	part = launchClamp1_4292189694
+	part = launchClamp1_4293350494
 	partName = Part
-	pos = 0.145734,18.31615,-4.083457
+	pos = 1.194072,23.84029,0.9364252
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -0.03007781,-4.669878E-05,-0.001551382,-0.9995465
+	rot = -0.03007781,-4.67003E-05,-0.00155138,-0.9995465
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 11
+	istg = 1
 	dstg = 2
-	sidx = 3
+	sidx = 0
 	sqor = 11
 	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = launchClamp1_4292191494
-	sym = launchClamp1_4292190894
-	sym = launchClamp1_4292190294
-	srfN = srfAttach,r7.blok.bvgd.sput_4292190146
+	sym = launchClamp1_4293352354
+	sym = launchClamp1_4293351734
+	sym = launchClamp1_4293351114
+	srfN = srfAttach,rn.r7.blok.bvgd_4293350960
 	EVENTS
 	{
 	}
@@ -5535,18 +7615,32 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 7.542481
-		height = 19.03117
-		towerRot = 0.0300778,4.669877E-05,0.001551382,-0.9995463
+		scaleFactor = 9.731827
+		height = 24.55531
+		stagingEnabled = True
+		towerRot = 0.0300778,4.67003E-05,0.00155138,-0.9995463
 		EVENTS
 		{
 			Release
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5566,12 +7660,14 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
+		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -5583,9 +7679,22 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5611,15 +7720,78 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		stagingEnabled = True
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5632,12 +7804,12 @@ PART
 }
 PART
 {
-	part = WING.R7_4292189586
+	part = rn.WING.R7_4293350382
 	partName = Winglet
-	pos = 0.1416902,18.96557,-3.32641
+	pos = 1.190028,24.4897,1.693475
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,1.314474E-08
-	rot = 6.458946E-13,0.7071068,-9.612971E-14,-0.7071068
+	rot = 7.958079E-13,0.7071068,-2.842171E-13,-0.7071068
 	attRot = 0,0,0,1
 	attRot0 = 1.368573E-07,1.03706E-18,-2.612306E-06,-1
 	mir = 1,1,1
@@ -5651,10 +7823,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = WING.R7_4292191386
-	sym = WING.R7_4292190786
-	sym = WING.R7_4292190186
-	attN = top,r7.blok.bvgd.sput_4292190146
+	sym = rn.WING.R7_4293352242
+	sym = rn.WING.R7_4293351622
+	sym = rn.WING.R7_4293351002
+	attN = top,rn.r7.blok.bvgd_4293350960
 	EVENTS
 	{
 	}
@@ -5668,11 +7840,16 @@ PART
 	{
 		name = ModuleControlSurface
 		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
 		ignorePitch = False
 		ignoreYaw = False
 		ignoreRoll = False
 		deploy = False
 		deployInvert = False
+		partDeployInvert = False
+		authorityLimiter = 100
+		stagingEnabled = True
 		ignorePitch_UIFlight
 		{
 			controlEnabled = True
@@ -5693,8 +7870,31 @@ PART
 		{
 			controlEnabled = True
 		}
+		partDeployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		authorityLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = -150
+			maxValue = 150
+			stepIncrement = 0.1
+		}
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5715,9 +7915,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4292181128
+	part = strutConnector_4293350340
 	partName = CompoundPart
-	pos = -0.680385,22.41194,-0.1291124
+	pos = 0.3679534,27.93608,4.890774
 	attPos = 0,0,0
 	attPos0 = -0.8220719,-5.284611,4.899925E-08
 	rot = 0,0,-2.612306E-06,1
@@ -5734,10 +7934,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4292180318
-	sym = strutConnector_4292180254
-	sym = strutConnector_4292180190
-	srfN = srfAttach,r7.blok.a.sput_4292192856
+	sym = strutConnector_4293350278
+	sym = strutConnector_4293350216
+	sym = strutConnector_4293350154
+	srfN = srfAttach,rn.r7.blok.a_4293353776
 	EVENTS
 	{
 	}
@@ -5746,17 +7946,30 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4292191946
-		pos = -0.02808732,0.1367949,-0.003770399
-		rot = 0,-0.0008257561,-0.001470616,0.9999986
+		tgt = 4294033192
+		pos = -0.02102655,0.1024045,-0.00282392
+		rot = 0,0.06620996,-0.001739041,0.9978042
 		dir = -0.2010552,0.9792081,-0.02698931
 	}
 	MODULE
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5766,8 +7979,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5776,9 +8002,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4292180318
+	part = strutConnector_4293350278
 	partName = CompoundPart
-	pos = 0.1416869,22.41194,0.6929593
+	pos = 1.190025,27.93608,5.712846
 	attPos = 0,0,0
 	attPos0 = -5.684342E-14,-5.284611,0.8220718
 	rot = -1.84718E-06,0.7071068,-1.84718E-06,0.7071068
@@ -5795,10 +8021,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4292181128
-	sym = strutConnector_4292180254
-	sym = strutConnector_4292180190
-	srfN = srfAttach,r7.blok.a.sput_4292192856
+	sym = strutConnector_4293350340
+	sym = strutConnector_4293350216
+	sym = strutConnector_4293350154
+	srfN = srfAttach,rn.r7.blok.a_4293353776
 	EVENTS
 	{
 	}
@@ -5807,17 +8033,30 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4292191346
-		pos = -0.02809245,0.1368178,-0.003771085
-		rot = 0,-0.0008255037,-0.001470615,0.9999986
+		tgt = 4294032574
+		pos = -0.02104068,0.102477,-0.002824309
+		rot = 0,0.06620967,-0.001739775,0.9978042
 		dir = -0.2010552,0.9792081,-0.02698931
 	}
 	MODULE
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5827,8 +8066,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5837,9 +8089,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4292180254
+	part = strutConnector_4293350216
 	partName = CompoundPart
-	pos = 0.9637587,22.41194,-0.1291126
+	pos = 2.012097,27.93608,4.890774
 	attPos = 0,0,0
 	attPos0 = 0.8220719,-5.284611,-1.208671E-07
 	rot = -2.612306E-06,1,1.141875E-13,-4.371139E-08
@@ -5856,10 +8108,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4292181128
-	sym = strutConnector_4292180318
-	sym = strutConnector_4292180190
-	srfN = srfAttach,r7.blok.a.sput_4292192856
+	sym = strutConnector_4293350340
+	sym = strutConnector_4293350278
+	sym = strutConnector_4293350154
+	srfN = srfAttach,rn.r7.blok.a_4293353776
 	EVENTS
 	{
 	}
@@ -5868,17 +8120,30 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4292190746
-		pos = -0.02808732,0.1367949,-0.003770384
-		rot = 0,-0.0008257539,-0.001470616,0.9999986
+		tgt = 4294031956
+		pos = -0.02102881,0.1024178,-0.002821479
+		rot = 0,0.06620993,-0.001739252,0.9978042
 		dir = -0.2010552,0.9792081,-0.02698931
 	}
 	MODULE
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5888,8 +8153,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5898,9 +8176,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4292180190
+	part = strutConnector_4293350154
 	partName = CompoundPart
-	pos = 0.1416868,22.41194,-0.9511843
+	pos = 1.190025,27.93608,4.068702
 	attPos = 0,0,0
 	attPos0 = -9.799857E-08,-5.284611,-0.8220718
 	rot = -1.84718E-06,0.7071068,1.84718E-06,-0.7071068
@@ -5917,10 +8195,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4292181128
-	sym = strutConnector_4292180318
-	sym = strutConnector_4292180254
-	srfN = srfAttach,r7.blok.a.sput_4292192856
+	sym = strutConnector_4293350340
+	sym = strutConnector_4293350278
+	sym = strutConnector_4293350216
+	srfN = srfAttach,rn.r7.blok.a_4293353776
 	EVENTS
 	{
 	}
@@ -5929,17 +8207,30 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4292190146
-		pos = -0.02808196,0.1367682,-0.003769677
-		rot = 0,-0.0008258279,-0.00147062,0.9999986
+		tgt = 4294031338
+		pos = -0.02101445,0.1023301,-0.002820678
+		rot = 0,0.066212,-0.001738536,0.9978041
 		dir = -0.2010552,0.9792081,-0.02698931
 	}
 	MODULE
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5949,8 +8240,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5959,9 +8263,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4292179658
+	part = strutConnector_4293350092
 	partName = CompoundPart
-	pos = -0.6809487,25.31285,-0.1291124
+	pos = 0.3673893,30.83699,4.890774
 	attPos = 0,0,0
 	attPos0 = -0.8226356,-2.383699,4.903291E-08
 	rot = 8.038873E-14,0,2.612306E-06,1
@@ -5978,10 +8282,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4292179168
-	sym = strutConnector_4292179104
-	sym = strutConnector_4292179040
-	srfN = srfAttach,r7.blok.a.sput_4292192856
+	sym = strutConnector_4293350030
+	sym = strutConnector_4293349968
+	sym = strutConnector_4293349906
+	srfN = srfAttach,rn.r7.blok.a_4293353776
 	EVENTS
 	{
 	}
@@ -5990,17 +8294,30 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4292191946
-		pos = -0.01894366,0.1490518,-0.0006726605
-		rot = 0,-0.0008257561,-0.001475841,0.9999986
+		tgt = 4294033192
+		pos = -0.01004351,0.07902055,-0.0003574801
+		rot = 0,0.06620996,-0.001744231,0.9978042
 		dir = -0.1260791,0.9920101,-0.004476838
 	}
 	MODULE
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -6010,8 +8327,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -6020,9 +8350,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4292179168
+	part = strutConnector_4293350030
 	partName = CompoundPart
-	pos = 0.1416869,25.31285,0.693523
+	pos = 1.190025,30.83699,5.71341
 	attPos = 0,0,0
 	attPos0 = 0,-2.383699,0.8226355
 	rot = 1.84718E-06,0.7071068,1.84718E-06,0.7071068
@@ -6039,10 +8369,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4292179658
-	sym = strutConnector_4292179104
-	sym = strutConnector_4292179040
-	srfN = srfAttach,r7.blok.a.sput_4292192856
+	sym = strutConnector_4293350092
+	sym = strutConnector_4293349968
+	sym = strutConnector_4293349906
+	srfN = srfAttach,rn.r7.blok.a_4293353776
 	EVENTS
 	{
 	}
@@ -6051,17 +8381,30 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4292191346
-		pos = -0.01894873,0.1490918,-0.0006728426
-		rot = 0,-0.0008255037,-0.00147584,0.9999986
+		tgt = 4294032574
+		pos = -0.01005334,0.07910161,-0.0003572711
+		rot = 0,0.06620968,-0.001744965,0.9978042
 		dir = -0.1260791,0.9920101,-0.004476838
 	}
 	MODULE
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -6071,8 +8414,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -6081,9 +8437,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4292179104
+	part = strutConnector_4293349968
 	partName = CompoundPart
-	pos = 0.9643224,25.31285,-0.1291126
+	pos = 2.012661,30.83699,4.890774
 	attPos = 0,0,0
 	attPos0 = 0.8226356,-2.383699,-1.209501E-07
 	rot = 2.612306E-06,1,-1.945763E-13,-4.371139E-08
@@ -6100,10 +8456,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4292179658
-	sym = strutConnector_4292179168
-	sym = strutConnector_4292179040
-	srfN = srfAttach,r7.blok.a.sput_4292192856
+	sym = strutConnector_4293350092
+	sym = strutConnector_4293350030
+	sym = strutConnector_4293349906
+	srfN = srfAttach,rn.r7.blok.a_4293353776
 	EVENTS
 	{
 	}
@@ -6112,17 +8468,30 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4292190746
-		pos = -0.01894366,0.1490518,-0.0006726674
-		rot = 0,-0.0008257538,-0.00147584,0.9999986
+		tgt = 4294031956
+		pos = -0.01004446,0.0790339,-0.0003569123
+		rot = 0,0.06620993,-0.001744442,0.9978042
 		dir = -0.1260791,0.9920101,-0.004476838
 	}
 	MODULE
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -6132,8 +8501,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -6142,9 +8524,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4292179040
+	part = strutConnector_4293349906
 	partName = CompoundPart
-	pos = 0.1416868,25.31285,-0.951748
+	pos = 1.190025,30.83699,4.068138
 	attPos = 0,0,0
 	attPos0 = -9.806581E-08,-2.383699,-0.8226355
 	rot = 1.84718E-06,0.7071068,-1.84718E-06,-0.7071068
@@ -6161,10 +8543,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4292179658
-	sym = strutConnector_4292179168
-	sym = strutConnector_4292179104
-	srfN = srfAttach,r7.blok.a.sput_4292192856
+	sym = strutConnector_4293350092
+	sym = strutConnector_4293350030
+	sym = strutConnector_4293349968
+	srfN = srfAttach,rn.r7.blok.a_4293353776
 	EVENTS
 	{
 	}
@@ -6173,17 +8555,30 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4292190146
-		pos = -0.0189383,0.1490079,-0.0006724513
-		rot = 0,-0.0008258279,-0.001475845,0.9999986
+		tgt = 4294031338
+		pos = -0.01003302,0.07892995,-0.0003578155
+		rot = 0,0.06621201,-0.001743726,0.997804
 		dir = -0.1260791,0.9920101,-0.004476838
 	}
 	MODULE
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -6193,8 +8588,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
