@@ -1,21 +1,21 @@
 ship = Vostok-8k72
 version = 1.1.0
 description = Derived from the earlier Vostok-L, it has uprated engines to improve performance, and an enlarged payload capacity.
-type = VAB
-size = 10.75388,29.44722,10.75389
+type = None
+size = 10.75387,28.4556,16.144
 PART
 {
-	part = rn.r7.vostok.blok.e.lunar_4294117636
+	part = rn.r7.vostok.blok.e.lunar_4291758090
 	partName = Part
-	pos = 0.4606535,25.16047,4.04046
+	pos = -4.90167,23.93277,10.76828
 	attPos = 0,0,0
-	attPos0 = 0.4606535,25.16047,4.04046
+	attPos0 = -4.90167,23.93277,10.76828
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 0
+	istg = 10
 	dstg = 0
 	sidx = 0
 	sqor = 10
@@ -24,12 +24,12 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.vostok.blok.e.vernier_4294113200
-	link = rn.r7.adapter.blok.e_4294117362
-	link = rn.luna.fairing_4294113374
-	attN = 1,rn.r7.adapter.blok.e_4294117362
-	attN = top,rn.luna.fairing_4294113374
-	attN = vernier,rn.r7.vostok.blok.e.vernier_4294113200
+	link = rn.r7.vostok.blok.e.vernier_4291757814
+	link = rn.r7.adapter.blok.e_4291757670
+	link = rn.luna.fairing_4291729146
+	attN = 1,rn.r7.adapter.blok.e_4291757670
+	attN = fairing,rn.luna.fairing_4291729146
+	attN = vernier,rn.r7.vostok.blok.e.vernier_4291757814
 	EVENTS
 	{
 	}
@@ -465,125 +465,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CleanUpExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Restore
-				guiName = Restore
-				category = Restore
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Experiment: Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
 		name = MechJebCore
 		isEnabled = True
 		running = True
@@ -670,422 +551,6 @@ PART
 				actionGroup = None
 			}
 		}
-		MechJebLocalSettings
-		{
-			MechJebModuleMenu
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentGuidance
-			{
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleAscentNavBall
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentPathEditor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAttitudeAdjustment
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleCustomWindowEditor
-			{
-				unlockParts = 
-				unlockTechs = flightControl
-			}
-			MechJebModuleDebugArrows
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleDockingAutopilot
-			{
-				forceRol = False
-				overrideSafeDistance = False
-				overrideTargetSize = False
-				unlockParts = 
-				unlockTechs = 
-				rol
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleDockingGuidance
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleInfoItems
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleLandingAutopilot
-			{
-				deployGears = True
-				deployChutes = True
-				rcsAdjustment = True
-				unlockParts = 
-				unlockTechs = 
-				touchdownSpeed
-				{
-					_val = 0.5
-					_text = 0.5
-				}
-				minThrust
-				{
-					_val = 0.0001
-					_text = 0.0001
-				}
-				decelerationEndAltitude
-				{
-					_val = 500
-					_text = 500
-				}
-				CorrectionBeforeDeceleration
-				{
-					_val = 1000
-					_text = 1000
-				}
-				safityThrustLimit
-				{
-					_val = 0.9
-					_text = 0.9
-				}
-				limitGearsStage
-				{
-					val = 0
-					_text = 0
-				}
-				limitChutesStage
-				{
-					val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleLandingGuidance
-			{
-				landingSiteIdx = 0
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleLandingPredictions
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleManeuverPlanner
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleNodeEditor
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleNodeExecutor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRCSBalancerWindow
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleRendezvousAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRendezvousAutopilotWindow
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleRendezvousGuidance
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleRoverController
-			{
-				ControlHeading = False
-				ControlSpeed = False
-				BrakeOnEject = False
-				BrakeOnEnergyDepletion = False
-				WarpToDaylight = True
-				StabilityControl = False
-				LimitAcceleration = False
-				unlockParts = 
-				unlockTechs = 
-				heading
-				{
-					_val = 0
-					_text = 0
-				}
-				speed
-				{
-					_val = 10
-					_text = 10
-				}
-			}
-			MechJebModuleRoverWindow
-			{
-				unlockParts = 
-				unlockTechs = fieldScience
-			}
-			MechJebModuleSettings
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSmartASS
-			{
-				mode = ORBITAL
-				target = OFF
-				advReference = INERTIAL
-				advDirection = FORWARD
-				forceRol = False
-				forcePitch = True
-				forceYaw = True
-				unlockParts = 
-				unlockTechs = flightControl
-				srfHdg
-				{
-					_val = 90
-					_text = 90
-				}
-				srfPit
-				{
-					_val = 90
-					_text = 90
-				}
-				srfRol
-				{
-					_val = 0
-					_text = 0
-				}
-				srfVelYaw
-				{
-					_val = 0
-					_text = 0
-				}
-				srfVelPit
-				{
-					_val = 0
-					_text = 0
-				}
-				srfVelRol
-				{
-					_val = 0
-					_text = 0
-				}
-				rol
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleSmartRcs
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSpaceplaneAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSpaceplaneGuidance
-			{
-				runwayIndex = 0
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleStageStats
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleTargetController
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleThrustWindow
-			{
-				autostageSavedState = False
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleTranslatron
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-				trans_spd
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleWarpHelper
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-				phaseAngle
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleWaypointWindow
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleWaypointHelpWindow
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			ModExtensionDemo
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleWarpController
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSolarPanelController
-			{
-				prev_ShouldOpenSolarPanels = False
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleThrustController
-			{
-				limitThrottle = False
-				limiterMinThrottle = False
-				electricThrottle = False
-				unlockParts = 
-				unlockTechs = 
-				maxThrottle
-				{
-					_val = 1
-					_text = 100
-				}
-				minThrottle
-				{
-					_val = 0.05
-					_text = 5
-				}
-				electricThrottleLo
-				{
-					_val = 0.05
-					_text = 5
-				}
-				electricThrottleHi
-				{
-					_val = 0.15
-					_text = 15
-				}
-			}
-			MechJebModuleRCSController
-			{
-				unlockParts = 
-				unlockTechs = 
-				Tf
-				{
-					_val = 1
-					_text = 1
-				}
-				Kp
-				{
-					_val = 0.125
-					_text = 0.125
-				}
-				Ki
-				{
-					_val = 0.07
-					_text = 0.07
-				}
-				Kd
-				{
-					_val = 0.53
-					_text = 0.53
-				}
-			}
-			MechJebModuleRCSBalancer
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAttitudeController
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleStagingController
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleFlightRecorder
-			{
-				markUT = 0
-				deltaVExpended = 0
-				dragLosses = 0
-				gravityLosses = 0
-				steeringLosses = 0
-				markLAN = 0
-				markLatitude = 0
-				markLongitude = 0
-				markAltitude = 0
-				markBodyIndex = 1
-				maxDragGees = 0
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleFlightRecorderGraph
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-		}
 	}
 	MODULE
 	{
@@ -1162,9 +627,9 @@ PART
 }
 PART
 {
-	part = rn.r7.vostok.blok.e.vernier_4294113200
+	part = rn.r7.vostok.blok.e.vernier_4291757814
 	partName = Part
-	pos = 0.4606535,25.16047,4.04046
+	pos = -4.90167,23.93277,10.76828
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = 0,0,0,1
@@ -1172,7 +637,7 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 0
+	istg = 10
 	dstg = 0
 	sidx = 1
 	sqor = 10
@@ -1181,7 +646,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	attN = top,rn.r7.vostok.blok.e.lunar_4294117636
+	attN = top,rn.r7.vostok.blok.e.lunar_4291758090
 	EVENTS
 	{
 	}
@@ -1461,9 +926,9 @@ PART
 }
 PART
 {
-	part = rn.r7.adapter.blok.e_4294117362
+	part = rn.r7.adapter.blok.e_4291757670
 	partName = Part
-	pos = 0.4606535,23.22304,4.04046
+	pos = -4.90167,21.99534,10.76828
 	attPos = 0,0,0
 	attPos0 = 0,-1.937429,0
 	rot = 0,0,0,1
@@ -1471,18 +936,18 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 0
+	istg = 10
 	dstg = 1
 	sidx = 2
 	sqor = 10
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.blok.a_4294117298
-	attN = top,rn.r7.vostok.blok.e.lunar_4294117636
-	attN = bottom,rn.r7.blok.a_4294117298
+	link = rn.r7.blok.a_4291757606
+	attN = top,rn.r7.vostok.blok.e.lunar_4291758090
+	attN = bottom,rn.r7.blok.a_4291757606
 	EVENTS
 	{
 	}
@@ -1621,9 +1086,9 @@ PART
 }
 PART
 {
-	part = rn.r7.blok.a_4294117298
+	part = rn.r7.blok.a_4291757606
 	partName = Part
-	pos = 0.4606535,11.33388,4.04046
+	pos = -4.90167,10.10618,10.76828
 	attPos = 0,0,0
 	attPos0 = 0.2927352,12.71288,-1.809635
 	rot = 0,0,0,1
@@ -1635,26 +1100,26 @@ PART
 	dstg = 2
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.blok.a.engine_4294117088
-	link = rn.r7.blok.bvgd_4294116342
-	link = rn.r7.blok.bvgd_4294115724
-	link = rn.r7.blok.bvgd_4294115106
-	link = rn.r7.blok.bvgd_4294114488
-	link = strutConnector_4294113870
-	link = strutConnector_4294113808
-	link = strutConnector_4294113746
-	link = strutConnector_4294113684
-	link = strutConnector_4294113622
-	link = strutConnector_4294113560
-	link = strutConnector_4294113498
-	link = strutConnector_4294113436
-	attN = top,rn.r7.adapter.blok.e_4294117362
-	attN = bottom,rn.r7.blok.a.engine_4294117088
+	link = rn.r7.blok.a.engine_4291757396
+	link = rn.r7.blok.bvgd_4291756650
+	link = rn.r7.blok.bvgd_4291756032
+	link = rn.r7.blok.bvgd_4291755414
+	link = rn.r7.blok.bvgd_4291754796
+	link = strutConnector_4291754178
+	link = strutConnector_4291754116
+	link = strutConnector_4291754054
+	link = strutConnector_4291753992
+	link = strutConnector_4291753930
+	link = strutConnector_4291753868
+	link = strutConnector_4291753806
+	link = strutConnector_4291753744
+	attN = top,rn.r7.adapter.blok.e_4291757670
+	attN = bottom,rn.r7.blok.a.engine_4291757396
 	EVENTS
 	{
 	}
@@ -1719,8 +1184,8 @@ PART
 	{
 		name = FStextureSwitch2
 		isEnabled = True
-		selectedTexture = 2
-		selectedTextureURL = RN_R7/master/R-7 Bottom 2
+		selectedTexture = 0
+		selectedTextureURL = RN_R7/master/R-7 Bottom
 		selectedMapURL = 
 		stagingEnabled = True
 		EVENTS
@@ -1968,9 +1433,9 @@ PART
 }
 PART
 {
-	part = rn.r7.blok.a.engine_4294117088
+	part = rn.r7.blok.a.engine_4291757396
 	partName = Part
-	pos = 0.4606535,2.271019,4.04046
+	pos = -4.90167,1.04332,10.76828
 	attPos = 0,0,0
 	attPos0 = 0,-9.062864,0
 	rot = 0,0,0,1
@@ -1978,24 +1443,24 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 2
 	sidx = 5
-	sqor = 14
-	sepI = 0
+	sqor = 13
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.vernier.engine.v.fg_4294116790
-	link = rn.r7.vernier.engine.v.fg_4294116678
-	link = rn.r7.vernier.engine.v.fg_4294116566
-	link = rn.r7.vernier.engine.v.fg_4294116454
-	attN = top,rn.r7.blok.a_4294117298
-	attN = 1,rn.r7.vernier.engine.v.fg_4294116790
-	attN = 2,rn.r7.vernier.engine.v.fg_4294116678
-	attN = 3,rn.r7.vernier.engine.v.fg_4294116566
-	attN = 4,rn.r7.vernier.engine.v.fg_4294116454
+	link = rn.r7.vernier.engine.v.fg_4291757098
+	link = rn.r7.vernier.engine.v.fg_4291756986
+	link = rn.r7.vernier.engine.v.fg_4291756874
+	link = rn.r7.vernier.engine.v.fg_4291756762
+	attN = top,rn.r7.blok.a_4291757606
+	attN = 1,rn.r7.vernier.engine.v.fg_4291757098
+	attN = 2,rn.r7.vernier.engine.v.fg_4291756986
+	attN = 3,rn.r7.vernier.engine.v.fg_4291756874
+	attN = 4,rn.r7.vernier.engine.v.fg_4291756762
 	EVENTS
 	{
 	}
@@ -2250,15 +1715,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294116790
+	part = rn.r7.vernier.engine.v.fg_4291757098
 	partName = Part
-	pos = 1.341677,1.815289,4.04046
+	pos = -4.020646,0.5875893,10.76828
 	attPos = 0,0,0
 	attPos0 = 0.8810232,-0.4557285,0
 	rot = 0,0,0,1
@@ -2266,17 +1731,17 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 2
 	sidx = 0
-	sqor = 14
-	sepI = 0
+	sqor = 13
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294116678
-	attN = top,rn.r7.blok.a.engine_4294117088
+	sym = rn.r7.vernier.engine.v.fg_4291756986
+	attN = top,rn.r7.blok.a.engine_4291757396
 	EVENTS
 	{
 	}
@@ -2531,15 +1996,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294116678
+	part = rn.r7.vernier.engine.v.fg_4291756986
 	partName = Part
-	pos = -0.4203705,1.815289,4.04046
+	pos = -5.782693,0.5875893,10.76828
 	attPos = 0,0,0
 	attPos0 = -0.8810232,-0.4557285,0
 	rot = 0,1,0,-4.371139E-08
@@ -2547,17 +2012,17 @@ PART
 	attRot0 = 0,1,0,-4.371139E-08
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 2
 	sidx = 0
-	sqor = 14
-	sepI = 0
+	sqor = 13
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294116790
-	attN = top,rn.r7.blok.a.engine_4294117088
+	sym = rn.r7.vernier.engine.v.fg_4291757098
+	attN = top,rn.r7.blok.a.engine_4291757396
 	EVENTS
 	{
 	}
@@ -2812,15 +2277,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294116566
+	part = rn.r7.vernier.engine.v.fg_4291756874
 	partName = Part
-	pos = 0.4606535,1.815289,3.159437
+	pos = -4.90167,0.5875893,9.887261
 	attPos = 0,0,0
 	attPos0 = 0,-0.4557285,-0.8810232
 	rot = 0,0.7071068,0,0.7071068
@@ -2828,17 +2293,17 @@ PART
 	attRot0 = 0,0.7071068,0,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 2
 	sidx = 1
-	sqor = 14
-	sepI = 0
+	sqor = 13
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294116454
-	attN = top,rn.r7.blok.a.engine_4294117088
+	sym = rn.r7.vernier.engine.v.fg_4291756762
+	attN = top,rn.r7.blok.a.engine_4291757396
 	EVENTS
 	{
 	}
@@ -3093,15 +2558,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294116454
+	part = rn.r7.vernier.engine.v.fg_4291756762
 	partName = Part
-	pos = 0.4606535,1.815289,4.921483
+	pos = -4.90167,0.5875893,11.64931
 	attPos = 0,0,0
 	attPos0 = 0,-0.4557285,0.8810232
 	rot = 0,0.7071068,0,-0.7071068
@@ -3109,17 +2574,17 @@ PART
 	attRot0 = 0,0.7071068,0,-0.7071069
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 2
 	sidx = 1
-	sqor = 14
-	sepI = 0
+	sqor = 13
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294116566
-	attN = top,rn.r7.blok.a.engine_4294117088
+	sym = rn.r7.vernier.engine.v.fg_4291756874
+	attN = top,rn.r7.blok.a.engine_4291757396
 	EVENTS
 	{
 	}
@@ -3374,15 +2839,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.blok.bvgd_4294116342
+	part = rn.r7.blok.bvgd_4291756650
 	partName = Part
-	pos = -0.3589525,13.0537,4.04046
+	pos = -5.721275,11.826,10.76828
 	attPos = 0,0,0
 	attPos0 = -0.8196052,1.719814,4.885226E-08
 	rot = 0,0,-2.612306E-06,1
@@ -3390,24 +2855,24 @@ PART
 	attRot0 = 0,0,-2.612306E-06,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 1
+	istg = 11
 	dstg = 3
 	sidx = 0
-	sqor = 12
-	sepI = 1
+	sqor = 11
+	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.bvgd.engine_4294116264
-	link = rn.WING.R7_4294115876
-	link = launchClamp1_4294115834
-	sym = rn.r7.blok.bvgd_4294114488
-	sym = rn.r7.blok.bvgd_4294115106
-	sym = rn.r7.blok.bvgd_4294115724
-	srfN = srfAttach,rn.r7.blok.a_4294117298
-	attN = top,rn.r7.bvgd.engine_4294116264
-	attN = wing,rn.WING.R7_4294115876
+	link = rn.r7.bvgd.engine_4291756572
+	link = rn.WING.R7_4291756184
+	link = launchClamp1_4291756142
+	sym = rn.r7.blok.bvgd_4291754796
+	sym = rn.r7.blok.bvgd_4291755414
+	sym = rn.r7.blok.bvgd_4291756032
+	srfN = srfAttach,rn.r7.blok.a_4291757606
+	attN = top,rn.r7.bvgd.engine_4291756572
+	attN = wing,rn.WING.R7_4291756184
 	EVENTS
 	{
 	}
@@ -3729,9 +3194,9 @@ PART
 }
 PART
 {
-	part = rn.r7.bvgd.engine_4294116264
+	part = rn.r7.bvgd.engine_4291756572
 	partName = Part
-	pos = -0.6943465,2.550339,4.04046
+	pos = -6.056669,1.322639,10.76828
 	attPos = 0,0,0
 	attPos0 = -0.3353402,-10.50336,-6.698007E-09
 	rot = -3.694361E-06,-0.7071068,-3.69436E-06,0.7071068
@@ -3739,23 +3204,23 @@ PART
 	attRot0 = -1.847181E-06,-0.7071068,-1.847181E-06,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 2
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.vernier.engine.v.fg_4294116100
-	link = rn.r7.vernier.engine.v.fg_4294115988
-	sym = rn.r7.bvgd.engine_4294114410
-	sym = rn.r7.bvgd.engine_4294115028
-	sym = rn.r7.bvgd.engine_4294115646
-	attN = top,rn.r7.blok.bvgd_4294116342
-	attN = 1,rn.r7.vernier.engine.v.fg_4294116100
-	attN = 2,rn.r7.vernier.engine.v.fg_4294115988
+	link = rn.r7.vernier.engine.v.fg_4291756408
+	link = rn.r7.vernier.engine.v.fg_4291756296
+	sym = rn.r7.bvgd.engine_4291754718
+	sym = rn.r7.bvgd.engine_4291755336
+	sym = rn.r7.bvgd.engine_4291755954
+	attN = top,rn.r7.blok.bvgd_4291756650
+	attN = 1,rn.r7.vernier.engine.v.fg_4291756408
+	attN = 2,rn.r7.vernier.engine.v.fg_4291756296
 	EVENTS
 	{
 	}
@@ -4010,15 +3475,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294116100
+	part = rn.r7.vernier.engine.v.fg_4291756408
 	partName = Part
-	pos = -2.33752,1.858658,4.478041
+	pos = -7.699843,0.6309586,11.20587
 	attPos = 0,0,0
 	attPos0 = 0.4375811,-0.6916962,1.643163
 	rot = 0,1,-1.782677E-17,6.824152E-12
@@ -4026,19 +3491,19 @@ PART
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 3
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294114246
-	sym = rn.r7.vernier.engine.v.fg_4294114864
-	sym = rn.r7.vernier.engine.v.fg_4294115482
-	attN = top,rn.r7.bvgd.engine_4294116264
+	sym = rn.r7.vernier.engine.v.fg_4291754554
+	sym = rn.r7.vernier.engine.v.fg_4291755172
+	sym = rn.r7.vernier.engine.v.fg_4291755790
+	attN = top,rn.r7.bvgd.engine_4291756572
 	EVENTS
 	{
 	}
@@ -4293,15 +3758,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294115988
+	part = rn.r7.vernier.engine.v.fg_4291756296
 	partName = Part
-	pos = -2.33752,1.858658,3.605777
+	pos = -7.699843,0.6309586,10.3336
 	attPos = 0,0,0
 	attPos0 = -0.4346832,-0.6916962,1.643163
 	rot = 0,1,-1.782677E-17,6.824152E-12
@@ -4309,19 +3774,19 @@ PART
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 4
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294114134
-	sym = rn.r7.vernier.engine.v.fg_4294114752
-	sym = rn.r7.vernier.engine.v.fg_4294115370
-	attN = top,rn.r7.bvgd.engine_4294116264
+	sym = rn.r7.vernier.engine.v.fg_4291754442
+	sym = rn.r7.vernier.engine.v.fg_4291755060
+	sym = rn.r7.vernier.engine.v.fg_4291755678
+	attN = top,rn.r7.bvgd.engine_4291756572
 	EVENTS
 	{
 	}
@@ -4576,15 +4041,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.WING.R7_4294115876
+	part = rn.WING.R7_4291756184
 	partName = Winglet
-	pos = -2.732747,2.612148,4.04046
+	pos = -8.09507,1.384449,10.76828
 	attPos = 0,0,0
 	attPos0 = -2.37374,-10.44156,0
 	rot = 0,0,0,1
@@ -4596,15 +4061,15 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 1
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.WING.R7_4294114022
-	sym = rn.WING.R7_4294114640
-	sym = rn.WING.R7_4294115258
-	attN = top,rn.r7.blok.bvgd_4294116342
+	sym = rn.WING.R7_4291754330
+	sym = rn.WING.R7_4291754948
+	sym = rn.WING.R7_4291755566
+	attN = top,rn.r7.blok.bvgd_4291756650
 	EVENTS
 	{
 	}
@@ -4693,9 +4158,9 @@ PART
 }
 PART
 {
-	part = launchClamp1_4294115834
+	part = launchClamp1_4291756142
 	partName = Part
-	pos = -3.475158,2.205379,4.04046
+	pos = -8.837481,0.9776802,10.76828
 	attPos = 0,0,0
 	attPos0 = -3.11615,-10.84833,2.60622E-07
 	rot = 0.02126933,0.7067869,-0.02126933,0.7067868
@@ -4703,19 +4168,19 @@ PART
 	attRot0 = 0.02126748,0.7067869,-0.02126748,0.7067869
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = 12
 	dstg = 4
 	sidx = 0
-	sqor = 13
-	sepI = 2
+	sqor = 12
+	sepI = 12
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = launchClamp1_4294113980
-	sym = launchClamp1_4294114598
-	sym = launchClamp1_4294115216
-	srfN = srfAttach,rn.r7.blok.bvgd_4294116342
+	sym = launchClamp1_4291754288
+	sym = launchClamp1_4291754906
+	sym = launchClamp1_4291755524
+	srfN = srfAttach,rn.r7.blok.bvgd_4291756650
 	EVENTS
 	{
 	}
@@ -4729,8 +4194,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 1.157424
-		height = 2.920408
+		scaleFactor = 0.6708589
+		height = 1.692709
 		stagingEnabled = True
 		towerRot = -0.02126933,-0.7067869,0.02126933,0.7067868
 		EVENTS
@@ -4866,61 +4331,12 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
-	part = rn.r7.blok.bvgd_4294115724
+	part = rn.r7.blok.bvgd_4291756032
 	partName = Part
-	pos = 0.4606535,13.0537,4.860065
+	pos = -4.90167,11.826,11.58789
 	attPos = 0,0,0
 	attPos0 = 0,1.719814,0.8196052
 	rot = -1.84718E-06,0.7071068,-1.84718E-06,0.7071068
@@ -4928,24 +4344,24 @@ PART
 	attRot0 = -1.84718E-06,0.7071068,-1.84718E-06,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 1
+	istg = 11
 	dstg = 3
 	sidx = 0
-	sqor = 12
-	sepI = 1
+	sqor = 11
+	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.bvgd.engine_4294115646
-	link = rn.WING.R7_4294115258
-	link = launchClamp1_4294115216
-	sym = rn.r7.blok.bvgd_4294114488
-	sym = rn.r7.blok.bvgd_4294115106
-	sym = rn.r7.blok.bvgd_4294116342
-	srfN = srfAttach,rn.r7.blok.a_4294117298
-	attN = top,rn.r7.bvgd.engine_4294115646
-	attN = wing,rn.WING.R7_4294115258
+	link = rn.r7.bvgd.engine_4291755954
+	link = rn.WING.R7_4291755566
+	link = launchClamp1_4291755524
+	sym = rn.r7.blok.bvgd_4291754796
+	sym = rn.r7.blok.bvgd_4291755414
+	sym = rn.r7.blok.bvgd_4291756650
+	srfN = srfAttach,rn.r7.blok.a_4291757606
+	attN = top,rn.r7.bvgd.engine_4291755954
+	attN = wing,rn.WING.R7_4291755566
 	EVENTS
 	{
 	}
@@ -5267,33 +4683,33 @@ PART
 }
 PART
 {
-	part = rn.r7.bvgd.engine_4294115646
+	part = rn.r7.bvgd.engine_4291755954
 	partName = Part
-	pos = 0.4606535,2.550339,5.19546
+	pos = -4.90167,1.322639,11.92328
 	attPos = 0,0,0
 	attPos0 = -0.3353402,-10.50336,-6.698007E-09
-	rot = -5.22462E-06,4.336809E-19,1.136868E-13,1
+	rot = -5.224621E-06,4.336809E-19,1.136868E-13,1
 	attRot = 0,-0.7071067,0,0.7071067
 	attRot0 = -1.847181E-06,-0.7071068,-1.847181E-06,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 2
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.vernier.engine.v.fg_4294115482
-	link = rn.r7.vernier.engine.v.fg_4294115370
-	sym = rn.r7.bvgd.engine_4294114410
-	sym = rn.r7.bvgd.engine_4294115028
-	sym = rn.r7.bvgd.engine_4294116264
-	attN = top,rn.r7.blok.bvgd_4294115724
-	attN = 1,rn.r7.vernier.engine.v.fg_4294115482
-	attN = 2,rn.r7.vernier.engine.v.fg_4294115370
+	link = rn.r7.vernier.engine.v.fg_4291755790
+	link = rn.r7.vernier.engine.v.fg_4291755678
+	sym = rn.r7.bvgd.engine_4291754718
+	sym = rn.r7.bvgd.engine_4291755336
+	sym = rn.r7.bvgd.engine_4291756572
+	attN = top,rn.r7.blok.bvgd_4291756032
+	attN = 1,rn.r7.vernier.engine.v.fg_4291755790
+	attN = 2,rn.r7.vernier.engine.v.fg_4291755678
 	EVENTS
 	{
 	}
@@ -5548,35 +4964,35 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294115482
+	part = rn.r7.vernier.engine.v.fg_4291755790
 	partName = Part
-	pos = 0.8982356,1.858658,6.838635
+	pos = -4.464087,0.6309586,13.56646
 	attPos = 0,0,0
 	attPos0 = 0.4375812,-0.6916962,1.643164
-	rot = -1.364242E-12,0.7071069,1.136868E-12,-0.7071069
+	rot = -9.094947E-13,0.7071069,9.094947E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 3
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294114246
-	sym = rn.r7.vernier.engine.v.fg_4294114864
-	sym = rn.r7.vernier.engine.v.fg_4294116100
-	attN = top,rn.r7.bvgd.engine_4294115646
+	sym = rn.r7.vernier.engine.v.fg_4291754554
+	sym = rn.r7.vernier.engine.v.fg_4291755172
+	sym = rn.r7.vernier.engine.v.fg_4291756408
+	attN = top,rn.r7.bvgd.engine_4291755954
 	EVENTS
 	{
 	}
@@ -5831,35 +5247,35 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294115370
+	part = rn.r7.vernier.engine.v.fg_4291755678
 	partName = Part
-	pos = 0.02596897,1.858658,6.838634
+	pos = -5.336354,0.6309586,13.56646
 	attPos = 0,0,0
 	attPos0 = -0.4346833,-0.6916962,1.643164
-	rot = -1.364242E-12,0.7071069,1.136868E-12,-0.7071069
+	rot = -9.094947E-13,0.7071069,9.094947E-13,-0.7071069
 	attRot = 0,0.9999999,0,0
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 4
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294114134
-	sym = rn.r7.vernier.engine.v.fg_4294114752
-	sym = rn.r7.vernier.engine.v.fg_4294115988
-	attN = top,rn.r7.bvgd.engine_4294115646
+	sym = rn.r7.vernier.engine.v.fg_4291754442
+	sym = rn.r7.vernier.engine.v.fg_4291755060
+	sym = rn.r7.vernier.engine.v.fg_4291756296
+	attN = top,rn.r7.bvgd.engine_4291755954
 	EVENTS
 	{
 	}
@@ -6114,15 +5530,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.WING.R7_4294115258
+	part = rn.WING.R7_4291755566
 	partName = Winglet
-	pos = 0.4606538,2.612148,7.233864
+	pos = -4.901669,1.384449,13.96169
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,-6.501892E-12
 	rot = 6.82121E-13,0.7071068,6.82121E-13,0.7071068
@@ -6134,15 +5550,15 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 1
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.WING.R7_4294114022
-	sym = rn.WING.R7_4294114640
-	sym = rn.WING.R7_4294115876
-	attN = top,rn.r7.blok.bvgd_4294115724
+	sym = rn.WING.R7_4291754330
+	sym = rn.WING.R7_4291754948
+	sym = rn.WING.R7_4291756184
+	attN = top,rn.r7.blok.bvgd_4291756032
 	EVENTS
 	{
 	}
@@ -6231,9 +5647,9 @@ PART
 }
 PART
 {
-	part = launchClamp1_4294115216
+	part = launchClamp1_4291755524
 	partName = Part
-	pos = 0.4606541,2.205379,7.976279
+	pos = -4.901669,0.9776802,14.7041
 	attPos = 0,0,0
 	attPos0 = -3.116151,-10.84833,2.606152E-07
 	rot = -1.514309E-10,0.9995476,-0.03007938,-9.888952E-08
@@ -6241,19 +5657,19 @@ PART
 	attRot0 = 0.02126748,0.7067869,-0.02126749,0.7067869
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = 12
 	dstg = 4
 	sidx = 0
-	sqor = 13
-	sepI = 2
+	sqor = 12
+	sepI = 12
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = launchClamp1_4294113980
-	sym = launchClamp1_4294114598
-	sym = launchClamp1_4294115834
-	srfN = srfAttach,rn.r7.blok.bvgd_4294115724
+	sym = launchClamp1_4291754288
+	sym = launchClamp1_4291754906
+	sym = launchClamp1_4291756142
+	srfN = srfAttach,rn.r7.blok.bvgd_4291756032
 	EVENTS
 	{
 	}
@@ -6267,8 +5683,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 1.157424
-		height = 2.920408
+		scaleFactor = 0.6708589
+		height = 1.692709
 		stagingEnabled = True
 		towerRot = 1.514309E-10,-0.9995476,0.03007938,-9.888952E-08
 		EVENTS
@@ -6404,61 +5820,12 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
-	part = rn.r7.blok.bvgd_4294115106
+	part = rn.r7.blok.bvgd_4291755414
 	partName = Part
-	pos = 1.280259,13.0537,4.04046
+	pos = -4.082064,11.826,10.76828
 	attPos = 0,0,0
 	attPos0 = 0.8196052,1.719814,-1.205044E-07
 	rot = -2.612306E-06,1,1.141875E-13,-4.371139E-08
@@ -6466,24 +5833,24 @@ PART
 	attRot0 = -2.612306E-06,1,1.141875E-13,-4.371139E-08
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 1
+	istg = 11
 	dstg = 3
 	sidx = 0
-	sqor = 12
-	sepI = 1
+	sqor = 11
+	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.bvgd.engine_4294115028
-	link = rn.WING.R7_4294114640
-	link = launchClamp1_4294114598
-	sym = rn.r7.blok.bvgd_4294114488
-	sym = rn.r7.blok.bvgd_4294115724
-	sym = rn.r7.blok.bvgd_4294116342
-	srfN = srfAttach,rn.r7.blok.a_4294117298
-	attN = top,rn.r7.bvgd.engine_4294115028
-	attN = wing,rn.WING.R7_4294114640
+	link = rn.r7.bvgd.engine_4291755336
+	link = rn.WING.R7_4291754948
+	link = launchClamp1_4291754906
+	sym = rn.r7.blok.bvgd_4291754796
+	sym = rn.r7.blok.bvgd_4291756032
+	sym = rn.r7.blok.bvgd_4291756650
+	srfN = srfAttach,rn.r7.blok.a_4291757606
+	attN = top,rn.r7.bvgd.engine_4291755336
+	attN = wing,rn.WING.R7_4291754948
 	EVENTS
 	{
 	}
@@ -6805,9 +6172,9 @@ PART
 }
 PART
 {
-	part = rn.r7.bvgd.engine_4294115028
+	part = rn.r7.bvgd.engine_4291755336
 	partName = Part
-	pos = 1.615654,2.550339,4.04046
+	pos = -3.746669,1.322639,10.76828
 	attPos = 0,0,0
 	attPos0 = -0.3353402,-10.50336,-6.698007E-09
 	rot = -3.69436E-06,0.7071068,3.694361E-06,0.7071068
@@ -6815,23 +6182,23 @@ PART
 	attRot0 = -1.847181E-06,-0.7071068,-1.847181E-06,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 2
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.vernier.engine.v.fg_4294114864
-	link = rn.r7.vernier.engine.v.fg_4294114752
-	sym = rn.r7.bvgd.engine_4294114410
-	sym = rn.r7.bvgd.engine_4294115646
-	sym = rn.r7.bvgd.engine_4294116264
-	attN = top,rn.r7.blok.bvgd_4294115106
-	attN = 1,rn.r7.vernier.engine.v.fg_4294114864
-	attN = 2,rn.r7.vernier.engine.v.fg_4294114752
+	link = rn.r7.vernier.engine.v.fg_4291755172
+	link = rn.r7.vernier.engine.v.fg_4291755060
+	sym = rn.r7.bvgd.engine_4291754718
+	sym = rn.r7.bvgd.engine_4291755954
+	sym = rn.r7.bvgd.engine_4291756572
+	attN = top,rn.r7.blok.bvgd_4291755414
+	attN = 1,rn.r7.vernier.engine.v.fg_4291755172
+	attN = 2,rn.r7.vernier.engine.v.fg_4291755060
 	EVENTS
 	{
 	}
@@ -7086,15 +6453,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294114864
+	part = rn.r7.vernier.engine.v.fg_4291755172
 	partName = Part
-	pos = 3.258825,1.858658,3.602879
+	pos = -2.103498,0.6309586,10.3307
 	attPos = 0,0,0
 	attPos0 = 0.4375811,-0.6916962,1.643163
 	rot = -1.778092E-17,-4.370457E-08,4.547474E-13,-1
@@ -7102,19 +6469,19 @@ PART
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 3
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294114246
-	sym = rn.r7.vernier.engine.v.fg_4294115482
-	sym = rn.r7.vernier.engine.v.fg_4294116100
-	attN = top,rn.r7.bvgd.engine_4294115028
+	sym = rn.r7.vernier.engine.v.fg_4291754554
+	sym = rn.r7.vernier.engine.v.fg_4291755790
+	sym = rn.r7.vernier.engine.v.fg_4291756408
+	attN = top,rn.r7.bvgd.engine_4291755336
 	EVENTS
 	{
 	}
@@ -7369,15 +6736,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294114752
+	part = rn.r7.vernier.engine.v.fg_4291755060
 	partName = Part
-	pos = 3.258825,1.858658,4.475142
+	pos = -2.103498,0.6309586,11.20297
 	attPos = 0,0,0
 	attPos0 = -0.4346832,-0.6916962,1.643163
 	rot = -1.778092E-17,-4.370457E-08,4.547474E-13,-1
@@ -7385,19 +6752,19 @@ PART
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 4
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294114134
-	sym = rn.r7.vernier.engine.v.fg_4294115370
-	sym = rn.r7.vernier.engine.v.fg_4294115988
-	attN = top,rn.r7.bvgd.engine_4294115028
+	sym = rn.r7.vernier.engine.v.fg_4291754442
+	sym = rn.r7.vernier.engine.v.fg_4291755678
+	sym = rn.r7.vernier.engine.v.fg_4291756296
+	attN = top,rn.r7.bvgd.engine_4291755336
 	EVENTS
 	{
 	}
@@ -7652,15 +7019,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.WING.R7_4294114640
+	part = rn.WING.R7_4291754948
 	partName = Winglet
-	pos = 3.654053,2.612148,4.04046
+	pos = -1.70827,1.384449,10.76828
 	attPos = 0,0,0
 	attPos0 = -2.37374,-10.44156,-2.65528E-14
 	rot = 0,1,0,-4.371139E-08
@@ -7672,15 +7039,15 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 1
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.WING.R7_4294114022
-	sym = rn.WING.R7_4294115258
-	sym = rn.WING.R7_4294115876
-	attN = top,rn.r7.blok.bvgd_4294115106
+	sym = rn.WING.R7_4291754330
+	sym = rn.WING.R7_4291755566
+	sym = rn.WING.R7_4291756184
+	attN = top,rn.r7.blok.bvgd_4291755414
 	EVENTS
 	{
 	}
@@ -7769,9 +7136,9 @@ PART
 }
 PART
 {
-	part = launchClamp1_4294114598
+	part = launchClamp1_4291754906
 	partName = Part
-	pos = 4.396464,2.205379,4.040459
+	pos = -0.9658594,0.9776802,10.76828
 	attPos = 0,0,0
 	attPos0 = -3.11615,-10.84833,2.60622E-07
 	rot = -0.02126933,0.7067868,-0.02126933,-0.7067869
@@ -7779,19 +7146,19 @@ PART
 	attRot0 = 0.02126748,0.7067869,-0.02126748,0.7067869
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = 12
 	dstg = 4
 	sidx = 0
-	sqor = 13
-	sepI = 2
+	sqor = 12
+	sepI = 12
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = launchClamp1_4294113980
-	sym = launchClamp1_4294115216
-	sym = launchClamp1_4294115834
-	srfN = srfAttach,rn.r7.blok.bvgd_4294115106
+	sym = launchClamp1_4291754288
+	sym = launchClamp1_4291755524
+	sym = launchClamp1_4291756142
+	srfN = srfAttach,rn.r7.blok.bvgd_4291755414
 	EVENTS
 	{
 	}
@@ -7805,8 +7172,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 1.157424
-		height = 2.920408
+		scaleFactor = 0.6708589
+		height = 1.692709
 		stagingEnabled = True
 		towerRot = 0.02126933,-0.7067868,0.02126933,-0.7067869
 		EVENTS
@@ -7942,61 +7309,12 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
-	part = rn.r7.blok.bvgd_4294114488
+	part = rn.r7.blok.bvgd_4291754796
 	partName = Part
-	pos = 0.4606534,13.0537,3.220855
+	pos = -4.90167,11.826,9.94868
 	attPos = 0,0,0
 	attPos0 = -9.770451E-08,1.719814,-0.8196052
 	rot = -1.84718E-06,0.7071068,1.84718E-06,-0.7071068
@@ -8004,24 +7322,24 @@ PART
 	attRot0 = -1.84718E-06,0.7071068,1.84718E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 1
+	istg = 11
 	dstg = 3
 	sidx = 0
-	sqor = 12
-	sepI = 1
+	sqor = 11
+	sepI = 11
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.bvgd.engine_4294114410
-	link = rn.WING.R7_4294114022
-	link = launchClamp1_4294113980
-	sym = rn.r7.blok.bvgd_4294115106
-	sym = rn.r7.blok.bvgd_4294115724
-	sym = rn.r7.blok.bvgd_4294116342
-	srfN = srfAttach,rn.r7.blok.a_4294117298
-	attN = top,rn.r7.bvgd.engine_4294114410
-	attN = wing,rn.WING.R7_4294114022
+	link = rn.r7.bvgd.engine_4291754718
+	link = rn.WING.R7_4291754330
+	link = launchClamp1_4291754288
+	sym = rn.r7.blok.bvgd_4291755414
+	sym = rn.r7.blok.bvgd_4291756032
+	sym = rn.r7.blok.bvgd_4291756650
+	srfN = srfAttach,rn.r7.blok.a_4291757606
+	attN = top,rn.r7.bvgd.engine_4291754718
+	attN = wing,rn.WING.R7_4291754330
 	EVENTS
 	{
 	}
@@ -8343,9 +7661,9 @@ PART
 }
 PART
 {
-	part = rn.r7.bvgd.engine_4294114410
+	part = rn.r7.bvgd.engine_4291754718
 	partName = Part
-	pos = 0.4606535,2.550339,2.88546
+	pos = -4.90167,1.322639,9.613285
 	attPos = 0,0,0
 	attPos0 = -0.3353402,-10.50336,-6.698007E-09
 	rot = 2.273737E-13,1,5.224616E-06,3.412077E-12
@@ -8353,23 +7671,23 @@ PART
 	attRot0 = -1.847181E-06,-0.7071068,-1.847181E-06,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 2
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rn.r7.vernier.engine.v.fg_4294114246
-	link = rn.r7.vernier.engine.v.fg_4294114134
-	sym = rn.r7.bvgd.engine_4294115028
-	sym = rn.r7.bvgd.engine_4294115646
-	sym = rn.r7.bvgd.engine_4294116264
-	attN = top,rn.r7.blok.bvgd_4294114488
-	attN = 1,rn.r7.vernier.engine.v.fg_4294114246
-	attN = 2,rn.r7.vernier.engine.v.fg_4294114134
+	link = rn.r7.vernier.engine.v.fg_4291754554
+	link = rn.r7.vernier.engine.v.fg_4291754442
+	sym = rn.r7.bvgd.engine_4291755336
+	sym = rn.r7.bvgd.engine_4291755954
+	sym = rn.r7.bvgd.engine_4291756572
+	attN = top,rn.r7.blok.bvgd_4291754796
+	attN = 1,rn.r7.vernier.engine.v.fg_4291754554
+	attN = 2,rn.r7.vernier.engine.v.fg_4291754442
 	EVENTS
 	{
 	}
@@ -8624,15 +7942,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294114246
+	part = rn.r7.vernier.engine.v.fg_4291754554
 	partName = Part
-	pos = 0.02307117,1.858658,1.242284
+	pos = -5.339252,0.6309586,7.970108
 	attPos = 0,0,0
 	attPos0 = 0.4375812,-0.6916962,1.643164
 	rot = 2.273737E-13,-0.7071069,0,-0.7071069
@@ -8640,19 +7958,19 @@ PART
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 3
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294114864
-	sym = rn.r7.vernier.engine.v.fg_4294115482
-	sym = rn.r7.vernier.engine.v.fg_4294116100
-	attN = top,rn.r7.bvgd.engine_4294114410
+	sym = rn.r7.vernier.engine.v.fg_4291755172
+	sym = rn.r7.vernier.engine.v.fg_4291755790
+	sym = rn.r7.vernier.engine.v.fg_4291756408
+	attN = top,rn.r7.bvgd.engine_4291754718
 	EVENTS
 	{
 	}
@@ -8907,15 +8225,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.r7.vernier.engine.v.fg_4294114134
+	part = rn.r7.vernier.engine.v.fg_4291754442
 	partName = Part
-	pos = 0.8953379,1.858658,1.242284
+	pos = -4.466985,0.6309586,7.970108
 	attPos = 0,0,0
 	attPos0 = -0.4346833,-0.6916962,1.643164
 	rot = 2.273737E-13,-0.7071069,0,-0.7071069
@@ -8923,19 +8241,19 @@ PART
 	attRot0 = -3.69436E-06,0.7071068,3.694361E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 3
+	istg = 13
 	dstg = 4
 	sidx = 4
-	sqor = 14
-	sepI = 1
+	sqor = 13
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.r7.vernier.engine.v.fg_4294114752
-	sym = rn.r7.vernier.engine.v.fg_4294115370
-	sym = rn.r7.vernier.engine.v.fg_4294115988
-	attN = top,rn.r7.bvgd.engine_4294114410
+	sym = rn.r7.vernier.engine.v.fg_4291755060
+	sym = rn.r7.vernier.engine.v.fg_4291755678
+	sym = rn.r7.vernier.engine.v.fg_4291756296
+	attN = top,rn.r7.bvgd.engine_4291754718
 	EVENTS
 	{
 	}
@@ -9190,15 +8508,15 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
+		isVisible = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = rn.WING.R7_4294114022
+	part = rn.WING.R7_4291754330
 	partName = Winglet
-	pos = 0.4606535,2.612148,0.8470564
+	pos = -4.90167,1.384449,7.574881
 	attPos = 0,0,0
 	attPos0 = -2.373741,-10.44156,6.501892E-12
 	rot = 6.82121E-13,0.7071068,-6.82121E-13,-0.7071068
@@ -9210,15 +8528,15 @@ PART
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 1
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = rn.WING.R7_4294114640
-	sym = rn.WING.R7_4294115258
-	sym = rn.WING.R7_4294115876
-	attN = top,rn.r7.blok.bvgd_4294114488
+	sym = rn.WING.R7_4291754948
+	sym = rn.WING.R7_4291755566
+	sym = rn.WING.R7_4291756184
+	attN = top,rn.r7.blok.bvgd_4291754796
 	EVENTS
 	{
 	}
@@ -9307,9 +8625,9 @@ PART
 }
 PART
 {
-	part = launchClamp1_4294113980
+	part = launchClamp1_4291754288
 	partName = Part
-	pos = 0.4606535,2.205379,0.1046419
+	pos = -4.90167,0.9776802,6.832466
 	attPos = 0,0,0
 	attPos0 = -3.116151,-10.84833,2.606288E-07
 	rot = -0.03007938,-8.940697E-08,0,-0.9995477
@@ -9317,19 +8635,19 @@ PART
 	attRot0 = 0.02126748,0.7067869,-0.02126749,0.7067869
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 2
+	istg = 12
 	dstg = 4
 	sidx = 0
-	sqor = 13
-	sepI = 2
+	sqor = 12
+	sepI = 12
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = launchClamp1_4294114598
-	sym = launchClamp1_4294115216
-	sym = launchClamp1_4294115834
-	srfN = srfAttach,rn.r7.blok.bvgd_4294114488
+	sym = launchClamp1_4291754906
+	sym = launchClamp1_4291755524
+	sym = launchClamp1_4291756142
+	srfN = srfAttach,rn.r7.blok.bvgd_4291754796
 	EVENTS
 	{
 	}
@@ -9343,8 +8661,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 1.157424
-		height = 2.920408
+		scaleFactor = 0.6708589
+		height = 1.692709
 		stagingEnabled = True
 		towerRot = 0.03007938,8.940696E-08,0,-0.9995475
 		EVENTS
@@ -9480,61 +8798,12 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
-	part = strutConnector_4294113870
+	part = strutConnector_4291754178
 	partName = CompoundPart
-	pos = -0.3618904,6.455711,4.04046
+	pos = -5.724214,5.228012,10.76828
 	attPos = 0,0,0
 	attPos0 = -0.8225436,-4.878176,4.902745E-08
 	rot = 1.607775E-13,0,2.612308E-06,1
@@ -9546,15 +8815,15 @@ PART
 	dstg = 2
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4294113684
-	sym = strutConnector_4294113746
-	sym = strutConnector_4294113808
-	srfN = srfAttach,rn.r7.blok.a_4294117298
+	sym = strutConnector_4291753992
+	sym = strutConnector_4291754054
+	sym = strutConnector_4291754116
+	srfN = srfAttach,rn.r7.blok.a_4291757606
 	EVENTS
 	{
 	}
@@ -9563,9 +8832,9 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294116342
-		pos = -0.01659225,0.1174317,-0.01321602
-		rot = 0,0.06620993,-0.001744225,0.9978042
+		tgt = 4291756650
+		pos = -0.0165879,0.1174012,-0.01322079
+		rot = 0,0.06620993,-0.001743936,0.9978042
 		dir = -0.139035,0.9840751,-0.110749
 	}
 	MODULE
@@ -9619,9 +8888,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4294113808
+	part = strutConnector_4291754116
 	partName = CompoundPart
-	pos = 0.4606535,6.455711,4.863003
+	pos = -4.90167,5.228012,11.59083
 	attPos = 0,0,0
 	attPos0 = 0,-4.878176,0.8225435
 	rot = 1.847181E-06,0.7071068,1.847181E-06,0.7071068
@@ -9633,15 +8902,15 @@ PART
 	dstg = 2
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4294113684
-	sym = strutConnector_4294113746
-	sym = strutConnector_4294113870
-	srfN = srfAttach,rn.r7.blok.a_4294117298
+	sym = strutConnector_4291753992
+	sym = strutConnector_4291754054
+	sym = strutConnector_4291754178
+	srfN = srfAttach,rn.r7.blok.a_4291757606
 	EVENTS
 	{
 	}
@@ -9650,9 +8919,9 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294115724
-		pos = -0.01659803,0.1174851,-0.01322034
-		rot = 0,0.06620961,-0.001744779,0.9978042
+		tgt = 4291756032
+		pos = -0.01660161,0.1175118,-0.01323381
+		rot = 0,0.06621195,-0.001744872,0.997804
 		dir = -0.139035,0.9840751,-0.110749
 	}
 	MODULE
@@ -9706,9 +8975,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4294113746
+	part = strutConnector_4291754054
 	partName = CompoundPart
-	pos = 1.283197,6.455711,4.04046
+	pos = -4.079126,5.228012,10.76828
 	attPos = 0,0,0
 	attPos0 = 0.8225436,-4.878176,-1.209365E-07
 	rot = 2.612308E-06,1,-2.749651E-13,-4.371139E-08
@@ -9720,15 +8989,15 @@ PART
 	dstg = 2
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4294113684
-	sym = strutConnector_4294113808
-	sym = strutConnector_4294113870
-	srfN = srfAttach,rn.r7.blok.a_4294117298
+	sym = strutConnector_4291753992
+	sym = strutConnector_4291754116
+	sym = strutConnector_4291754178
+	srfN = srfAttach,rn.r7.blok.a_4291757606
 	EVENTS
 	{
 	}
@@ -9737,9 +9006,9 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294115106
-		pos = -0.01659606,0.1174661,-0.01321636
-		rot = 0,0.06620996,-0.001744455,0.9978042
+		tgt = 4291755414
+		pos = -0.0166109,0.1175691,-0.01323077
+		rot = 0,0.06621002,-0.001745379,0.9978042
 		dir = -0.139035,0.9840751,-0.110749
 	}
 	MODULE
@@ -9793,9 +9062,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4294113684
+	part = strutConnector_4291753992
 	partName = CompoundPart
-	pos = 0.4606534,6.455711,3.217916
+	pos = -4.90167,5.228012,9.945741
 	attPos = 0,0,0
 	attPos0 = -9.80549E-08,-4.878176,-0.8225435
 	rot = 1.847181E-06,0.7071068,-1.847181E-06,-0.7071068
@@ -9807,15 +9076,15 @@ PART
 	dstg = 2
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4294113746
-	sym = strutConnector_4294113808
-	sym = strutConnector_4294113870
-	srfN = srfAttach,rn.r7.blok.a_4294117298
+	sym = strutConnector_4291754054
+	sym = strutConnector_4291754116
+	sym = strutConnector_4291754178
+	srfN = srfAttach,rn.r7.blok.a_4291757606
 	EVENTS
 	{
 	}
@@ -9824,9 +9093,9 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294114488
-		pos = -0.01659583,0.1174432,-0.01321397
-		rot = 0,0.06621025,-0.001744446,0.9978042
+		tgt = 4291754796
+		pos = -0.01660208,0.1175004,-0.01322781
+		rot = 0,0.06619831,-0.001744858,0.997805
 		dir = -0.139035,0.9840751,-0.110749
 	}
 	MODULE
@@ -9880,9 +9149,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4294113622
+	part = strutConnector_4291753930
 	partName = CompoundPart
-	pos = -0.3611146,8.732925,4.04046
+	pos = -5.723438,7.505226,10.76828
 	attPos = 0,0,0
 	attPos0 = -0.821767,-2.600954,4.898118E-08
 	rot = 0,0,-2.612306E-06,1
@@ -9894,15 +9163,15 @@ PART
 	dstg = 2
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4294113436
-	sym = strutConnector_4294113498
-	sym = strutConnector_4294113560
-	srfN = srfAttach,rn.r7.blok.a_4294117298
+	sym = strutConnector_4291753744
+	sym = strutConnector_4291753806
+	sym = strutConnector_4291753868
+	srfN = srfAttach,rn.r7.blok.a_4291757606
 	EVENTS
 	{
 	}
@@ -9911,9 +9180,9 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294116342
-		pos = -0.008665293,0.08563228,-0.00698519
-		rot = 0,0.06620994,-0.001739034,0.9978042
+		tgt = 4291756650
+		pos = -0.008662432,0.08560558,-0.006991625
+		rot = 0,0.06620994,-0.001738746,0.9978042
 		dir = -0.1003379,0.9916595,-0.08089318
 	}
 	MODULE
@@ -9967,9 +9236,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4294113560
+	part = strutConnector_4291753868
 	partName = CompoundPart
-	pos = 0.4606535,8.732925,4.862226
+	pos = -4.90167,7.505226,11.59005
 	attPos = 0,0,0
 	attPos0 = 0,-2.600954,0.821767
 	rot = -1.84718E-06,0.7071068,-1.84718E-06,0.7071068
@@ -9981,15 +9250,15 @@ PART
 	dstg = 2
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4294113436
-	sym = strutConnector_4294113498
-	sym = strutConnector_4294113622
-	srfN = srfAttach,rn.r7.blok.a_4294117298
+	sym = strutConnector_4291753744
+	sym = strutConnector_4291753806
+	sym = strutConnector_4291753930
+	srfN = srfAttach,rn.r7.blok.a_4291757606
 	EVENTS
 	{
 	}
@@ -9998,9 +9267,9 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294115724
-		pos = -0.00866893,0.08568187,-0.006988313
-		rot = 0,0.06620961,-0.001739588,0.9978042
+		tgt = 4291756032
+		pos = -0.008673579,0.08572574,-0.00700202
+		rot = 0,0.06621194,-0.001739681,0.9978041
 		dir = -0.1003379,0.9916595,-0.08089318
 	}
 	MODULE
@@ -10054,9 +9323,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4294113498
+	part = strutConnector_4291753806
 	partName = CompoundPart
-	pos = 1.282421,8.732925,4.04046
+	pos = -4.079902,7.505226,10.76828
 	attPos = 0,0,0
 	attPos0 = 0.821767,-2.600954,-1.208223E-07
 	rot = -2.612306E-06,1,1.141875E-13,-4.371139E-08
@@ -10068,15 +9337,15 @@ PART
 	dstg = 2
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4294113436
-	sym = strutConnector_4294113560
-	sym = strutConnector_4294113622
-	srfN = srfAttach,rn.r7.blok.a_4294117298
+	sym = strutConnector_4291753744
+	sym = strutConnector_4291753868
+	sym = strutConnector_4291753930
+	srfN = srfAttach,rn.r7.blok.a_4291757606
 	EVENTS
 	{
 	}
@@ -10085,9 +9354,9 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294115106
-		pos = -0.008668631,0.08567424,-0.00698682
-		rot = 0,0.06620996,-0.001739265,0.9978042
+		tgt = 4291755414
+		pos = -0.008678466,0.08576961,-0.006995738
+		rot = 0,0.06621002,-0.001740188,0.9978042
 		dir = -0.1003379,0.9916595,-0.08089318
 	}
 	MODULE
@@ -10141,9 +9410,9 @@ PART
 }
 PART
 {
-	part = strutConnector_4294113436
+	part = strutConnector_4291753744
 	partName = CompoundPart
-	pos = 0.4606534,8.732925,3.218693
+	pos = -4.90167,7.505226,9.946518
 	attPos = 0,0,0
 	attPos0 = -9.796236E-08,-2.600954,-0.821767
 	rot = -1.84718E-06,0.7071068,1.84718E-06,-0.7071068
@@ -10155,15 +9424,15 @@ PART
 	dstg = 2
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 10
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = strutConnector_4294113498
-	sym = strutConnector_4294113560
-	sym = strutConnector_4294113622
-	srfN = srfAttach,rn.r7.blok.a_4294117298
+	sym = strutConnector_4291753806
+	sym = strutConnector_4291753868
+	sym = strutConnector_4291753930
+	srfN = srfAttach,rn.r7.blok.a_4291757606
 	EVENTS
 	{
 	}
@@ -10172,9 +9441,9 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294114488
-		pos = -0.008668037,0.08565135,-0.006984812
-		rot = 0,0.06621024,-0.001739256,0.9978042
+		tgt = 4291754796
+		pos = -0.008673224,0.08571239,-0.006996386
+		rot = 0,0.0661983,-0.001739667,0.997805
 		dir = -0.1003379,0.9916595,-0.08089318
 	}
 	MODULE
@@ -10228,26 +9497,26 @@ PART
 }
 PART
 {
-	part = rn.luna.fairing_4294113374
+	part = rn.luna.fairing_4291729146
 	partName = Part
-	pos = 0.4606535,26.09258,4.04046
+	pos = -4.90167,25.10094,10.76828
 	attPos = 0,0,0
-	attPos0 = 0,0.9320965,0
+	attPos0 = 0,1.168175,0
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 4
+	istg = 9
 	dstg = 1
 	sidx = 0
-	sqor = 11
-	sepI = 4
+	sqor = 9
+	sepI = 1
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	attN = bottom,rn.r7.vostok.blok.e.lunar_4294117636
+	attN = bottom,rn.r7.vostok.blok.e.lunar_4291758090
 	EVENTS
 	{
 	}
@@ -10315,7 +9584,7 @@ PART
 		flameout = False
 		EngineIgnited = False
 		engineShutdown = False
-		currentThrottle = 0.9522887
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		stagingEnabled = True
