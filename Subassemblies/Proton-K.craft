@@ -1,8 +1,8 @@
 ship = Proton-K
 version = 1.1.0
 description = A Russian three-stage carrier rocket derived from the earlier Proton.
-type = VAB
-size = 11.012,36.93337,9.688897
+type = None
+size = 11.012,36.93338,9.688896
 PART
 {
 	part = rn.protonk.stg3.decoupler_4293631362
@@ -15,11 +15,11 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 5
+	istg = 11
 	dstg = 1
-	sidx = 0
+	sidx = 1
 	sqor = 11
-	sepI = 11
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -41,7 +41,6 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
-		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -55,23 +54,9 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Decoupler: Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -98,11 +83,11 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 5
+	istg = 11
 	dstg = 3
-	sidx = 1
+	sidx = 0
 	sqor = 11
-	sepI = 11
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -140,7 +125,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -154,7 +138,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -166,22 +149,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -211,7 +181,6 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
-		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -222,7 +191,6 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
-		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -233,7 +201,6 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -249,11 +216,11 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 6
+	istg = 12
 	dstg = 5
-	sidx = 2
+	sidx = 0
 	sqor = 12
-	sepI = 11
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -279,7 +246,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -293,7 +259,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -305,22 +270,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -346,21 +298,8 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -370,21 +309,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -394,11 +320,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -414,11 +339,11 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 6
+	istg = 12
 	dstg = 5
-	sidx = 0
+	sidx = 1
 	sqor = 12
-	sepI = 11
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -445,7 +370,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -459,7 +383,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -471,22 +394,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -512,21 +422,8 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -534,62 +431,84 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGimbal
+		name = KM_Gimbal_3
 		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = False
-		enablePitch = False
+		gimbalTransformName = thrustTransform
+		yawGimbalRange = 0
+		pitchGimbalRange = 20
+		debug = True
+		trimX = 0
+		trimY = 0
+		enableTrim = True
+		gimbalConstrain = 14
+		enableGimbal = True
+		enableSmoothGimbal = False
+		responseSpeed = 25
 		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
-		gimbalLock_UIFlight
+		autoSetRoll = True
+		hideSpeedEditing = False
+		hideRollEditing = False
+		trimX_UIFlight
+		{
+			controlEnabled = True
+			minValue = -14
+			maxValue = 14
+			stepIncrement = 1
+		}
+		trimY_UIFlight
+		{
+			controlEnabled = True
+			minValue = -14
+			maxValue = 14
+			stepIncrement = 1
+		}
+		enableTrim_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalLimiter_UIFlight
+		gimbalConstrain_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
+			maxValue = 14
+			stepIncrement = 1
+		}
+		enableGimbal_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableSmoothGimbal_UIFlight
+		{
+			controlEnabled = True
+		}
+		responseSpeed_UIFlight
+		{
+			controlEnabled = True
+			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
+			dbg_run
 			{
 				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
+				guiActive = False
+				guiIcon = Toggle Debug
+				guiName = Toggle Debug
+				category = Toggle Debug
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			ToggleStaging
+			toggleRoll
 			{
 				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle Roll
+				guiName = Deactivate Roll
+				category = Toggle Roll
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -597,27 +516,43 @@ PART
 		}
 		ACTIONS
 		{
-			ToggleAction
+			toggleGimbal
 			{
 				actionGroup = None
 			}
-			LockAction
+			plusTrimX
 			{
 				actionGroup = None
 			}
-			FreeAction
+			minusTrim
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
+			plus5Trim
 			{
 				actionGroup = None
 			}
-			ToggleYawAction
+			minus5Trim
 			{
 				actionGroup = None
 			}
-			ToggleRollAction
+			plusTrimY
+			{
+				actionGroup = None
+			}
+			minusTrimY
+			{
+				actionGroup = None
+			}
+			plus5TrimY
+			{
+				actionGroup = None
+			}
+			minus5TrimY
+			{
+				actionGroup = None
+			}
+			toggleTrim
 			{
 				actionGroup = None
 			}
@@ -627,11 +562,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.1402
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -647,11 +581,11 @@ PART
 	attRot0 = 0,1,0,-4.371139E-08
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 6
+	istg = 12
 	dstg = 5
-	sidx = 0
+	sidx = 2
 	sqor = 12
-	sepI = 11
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -678,7 +612,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -692,7 +625,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -704,22 +636,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -745,21 +664,8 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -767,62 +673,84 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGimbal
+		name = KM_Gimbal_3
 		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = False
-		enablePitch = False
+		gimbalTransformName = thrustTransform
+		yawGimbalRange = 0
+		pitchGimbalRange = 20
+		debug = True
+		trimX = 0
+		trimY = 0
+		enableTrim = True
+		gimbalConstrain = 14
+		enableGimbal = True
+		enableSmoothGimbal = False
+		responseSpeed = 25
 		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
-		gimbalLock_UIFlight
+		autoSetRoll = True
+		hideSpeedEditing = False
+		hideRollEditing = False
+		trimX_UIFlight
+		{
+			controlEnabled = True
+			minValue = -14
+			maxValue = 14
+			stepIncrement = 1
+		}
+		trimY_UIFlight
+		{
+			controlEnabled = True
+			minValue = -14
+			maxValue = 14
+			stepIncrement = 1
+		}
+		enableTrim_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalLimiter_UIFlight
+		gimbalConstrain_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
+			maxValue = 14
+			stepIncrement = 1
+		}
+		enableGimbal_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableSmoothGimbal_UIFlight
+		{
+			controlEnabled = True
+		}
+		responseSpeed_UIFlight
+		{
+			controlEnabled = True
+			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
+			dbg_run
 			{
 				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
+				guiActive = False
+				guiIcon = Toggle Debug
+				guiName = Toggle Debug
+				category = Toggle Debug
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			ToggleStaging
+			toggleRoll
 			{
 				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle Roll
+				guiName = Deactivate Roll
+				category = Toggle Roll
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -830,27 +758,43 @@ PART
 		}
 		ACTIONS
 		{
-			ToggleAction
+			toggleGimbal
 			{
 				actionGroup = None
 			}
-			LockAction
+			plusTrimX
 			{
 				actionGroup = None
 			}
-			FreeAction
+			minusTrim
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
+			plus5Trim
 			{
 				actionGroup = None
 			}
-			ToggleYawAction
+			minus5Trim
 			{
 				actionGroup = None
 			}
-			ToggleRollAction
+			plusTrimY
+			{
+				actionGroup = None
+			}
+			minusTrimY
+			{
+				actionGroup = None
+			}
+			plus5TrimY
+			{
+				actionGroup = None
+			}
+			minus5TrimY
+			{
+				actionGroup = None
+			}
+			toggleTrim
 			{
 				actionGroup = None
 			}
@@ -860,11 +804,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.1402
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -880,11 +823,11 @@ PART
 	attRot0 = 0,-0.7071068,0,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 6
+	istg = 12
 	dstg = 5
-	sidx = 1
+	sidx = 3
 	sqor = 12
-	sepI = 11
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -911,7 +854,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -925,7 +867,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -937,22 +878,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -978,21 +906,8 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -1000,62 +915,84 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGimbal
+		name = KM_Gimbal_3
 		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = False
-		enablePitch = False
+		gimbalTransformName = thrustTransform
+		yawGimbalRange = 0
+		pitchGimbalRange = 20
+		debug = True
+		trimX = 0
+		trimY = 0
+		enableTrim = True
+		gimbalConstrain = 14
+		enableGimbal = True
+		enableSmoothGimbal = False
+		responseSpeed = 25
 		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
-		gimbalLock_UIFlight
+		autoSetRoll = True
+		hideSpeedEditing = False
+		hideRollEditing = False
+		trimX_UIFlight
+		{
+			controlEnabled = True
+			minValue = -14
+			maxValue = 14
+			stepIncrement = 1
+		}
+		trimY_UIFlight
+		{
+			controlEnabled = True
+			minValue = -14
+			maxValue = 14
+			stepIncrement = 1
+		}
+		enableTrim_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalLimiter_UIFlight
+		gimbalConstrain_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
+			maxValue = 14
+			stepIncrement = 1
+		}
+		enableGimbal_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableSmoothGimbal_UIFlight
+		{
+			controlEnabled = True
+		}
+		responseSpeed_UIFlight
+		{
+			controlEnabled = True
+			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
+			dbg_run
 			{
 				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
+				guiActive = False
+				guiIcon = Toggle Debug
+				guiName = Toggle Debug
+				category = Toggle Debug
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			ToggleStaging
+			toggleRoll
 			{
 				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle Roll
+				guiName = Deactivate Roll
+				category = Toggle Roll
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1063,27 +1000,43 @@ PART
 		}
 		ACTIONS
 		{
-			ToggleAction
+			toggleGimbal
 			{
 				actionGroup = None
 			}
-			LockAction
+			plusTrimX
 			{
 				actionGroup = None
 			}
-			FreeAction
+			minusTrim
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
+			plus5Trim
 			{
 				actionGroup = None
 			}
-			ToggleYawAction
+			minus5Trim
 			{
 				actionGroup = None
 			}
-			ToggleRollAction
+			plusTrimY
+			{
+				actionGroup = None
+			}
+			minusTrimY
+			{
+				actionGroup = None
+			}
+			plus5TrimY
+			{
+				actionGroup = None
+			}
+			minus5TrimY
+			{
+				actionGroup = None
+			}
+			toggleTrim
 			{
 				actionGroup = None
 			}
@@ -1093,11 +1046,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.1402
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -1113,11 +1065,11 @@ PART
 	attRot0 = 0,0.7071069,0,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 6
+	istg = 12
 	dstg = 5
-	sidx = 1
+	sidx = 4
 	sqor = 12
-	sepI = 11
+	sepI = 10
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -1144,7 +1096,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1158,7 +1109,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -1170,22 +1120,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1211,21 +1148,8 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -1233,62 +1157,84 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleGimbal
+		name = KM_Gimbal_3
 		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = False
-		enablePitch = False
+		gimbalTransformName = thrustTransform
+		yawGimbalRange = 0
+		pitchGimbalRange = 20
+		debug = True
+		trimX = 0
+		trimY = 0
+		enableTrim = True
+		gimbalConstrain = 14
+		enableGimbal = True
+		enableSmoothGimbal = False
+		responseSpeed = 25
 		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
-		gimbalLock_UIFlight
+		autoSetRoll = True
+		hideSpeedEditing = False
+		hideRollEditing = False
+		trimX_UIFlight
+		{
+			controlEnabled = True
+			minValue = -14
+			maxValue = 14
+			stepIncrement = 1
+		}
+		trimY_UIFlight
+		{
+			controlEnabled = True
+			minValue = -14
+			maxValue = 14
+			stepIncrement = 1
+		}
+		enableTrim_UIFlight
 		{
 			controlEnabled = True
 		}
-		gimbalLimiter_UIFlight
+		gimbalConstrain_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
+			maxValue = 14
+			stepIncrement = 1
+		}
+		enableGimbal_UIFlight
+		{
+			controlEnabled = True
+		}
+		enableSmoothGimbal_UIFlight
+		{
+			controlEnabled = True
+		}
+		responseSpeed_UIFlight
+		{
+			controlEnabled = True
+			minValue = 1
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
+			dbg_run
 			{
 				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
+				guiActive = False
+				guiIcon = Toggle Debug
+				guiName = Toggle Debug
+				category = Toggle Debug
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			ToggleStaging
+			toggleRoll
 			{
 				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle Roll
+				guiName = Deactivate Roll
+				category = Toggle Roll
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1296,27 +1242,43 @@ PART
 		}
 		ACTIONS
 		{
-			ToggleAction
+			toggleGimbal
 			{
 				actionGroup = None
 			}
-			LockAction
+			plusTrimX
 			{
 				actionGroup = None
 			}
-			FreeAction
+			minusTrim
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
+			plus5Trim
 			{
 				actionGroup = None
 			}
-			ToggleYawAction
+			minus5Trim
 			{
 				actionGroup = None
 			}
-			ToggleRollAction
+			plusTrimY
+			{
+				actionGroup = None
+			}
+			minusTrimY
+			{
+				actionGroup = None
+			}
+			plus5TrimY
+			{
+				actionGroup = None
+			}
+			minus5TrimY
+			{
+				actionGroup = None
+			}
+			toggleTrim
 			{
 				actionGroup = None
 			}
@@ -1326,11 +1288,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.1402
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -1346,11 +1307,11 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 6
+	istg = 12
 	dstg = 5
-	sidx = 3
+	sidx = 5
 	sqor = 12
-	sepI = 12
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -1378,7 +1339,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1392,7 +1352,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -1404,22 +1363,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1447,7 +1393,6 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
-		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -1461,23 +1406,9 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Decoupler: Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1499,7 +1430,6 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -1519,7 +1449,7 @@ PART
 	dstg = 7
 	sidx = -1
 	sqor = -1
-	sepI = 12
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -1552,7 +1482,6 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
-		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -1563,7 +1492,6 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -1571,7 +1499,7 @@ PART
 {
 	part = rn.proton.rd0210_4293629702
 	partName = Part
-	pos = -0.5055451,-2.397225,0.7241037
+	pos = -0.505545,-2.397225,0.7241037
 	attPos = 0,0,0
 	attPos0 = -0.68,-6.465431,0.736
 	rot = 0,0,0,1
@@ -1579,11 +1507,11 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 7
+	istg = 13
 	dstg = 9
 	sidx = 0
 	sqor = 13
-	sepI = 12
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -1610,7 +1538,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1624,7 +1551,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -1636,22 +1562,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1679,12 +1592,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -1696,45 +1603,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -1750,39 +1620,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -1792,21 +1637,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -1816,11 +1648,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -1836,11 +1667,11 @@ PART
 	attRot0 = 0,1,0,-4.371139E-08
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 7
+	istg = 13
 	dstg = 9
-	sidx = 0
+	sidx = 1
 	sqor = 13
-	sepI = 12
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -1867,7 +1698,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1881,7 +1711,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -1893,22 +1722,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1936,12 +1752,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -1953,45 +1763,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2007,39 +1780,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2049,21 +1797,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2073,11 +1808,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2085,7 +1819,7 @@ PART
 {
 	part = rn.proton.rd0210_4293629462
 	partName = Part
-	pos = -0.5055451,-2.397225,-0.7478963
+	pos = -0.505545,-2.397225,-0.7478963
 	attPos = 0,0,0
 	attPos0 = -0.68,-6.465431,-0.736
 	rot = 0,-0.7071068,0,0.7071068
@@ -2093,11 +1827,11 @@ PART
 	attRot0 = 0,-0.7071068,0,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 7
+	istg = 13
 	dstg = 9
-	sidx = 1
+	sidx = 2
 	sqor = 13
-	sepI = 12
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2124,7 +1858,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -2138,7 +1871,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -2150,22 +1882,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2193,12 +1912,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -2210,45 +1923,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2264,39 +1940,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2306,21 +1957,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2330,11 +1968,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2350,11 +1987,11 @@ PART
 	attRot0 = 0,0.7071069,0,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 7
+	istg = 13
 	dstg = 9
-	sidx = 1
+	sidx = 3
 	sqor = 13
-	sepI = 12
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2381,7 +2018,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -2395,7 +2031,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -2407,22 +2042,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2450,12 +2072,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -2467,45 +2083,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2521,39 +2100,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2563,21 +2117,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2587,11 +2128,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2611,7 +2151,7 @@ PART
 	dstg = 9
 	sidx = -1
 	sqor = -1
-	sepI = 12
+	sepI = 11
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2641,11 +2181,11 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 7
+	istg = 13
 	dstg = 11
-	sidx = 2
+	sidx = 4
 	sqor = 13
-	sepI = 13
+	sepI = 12
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2684,7 +2224,6 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
-		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -2698,23 +2237,9 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Decoupler: Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2736,7 +2261,6 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
-		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -2747,7 +2271,6 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2763,11 +2286,11 @@ PART
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
+	istg = 15
 	dstg = 13
 	sidx = 0
 	sqor = 15
-	sepI = 13
+	sepI = 12
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -2794,7 +2317,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -2808,7 +2330,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -2820,22 +2341,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2863,12 +2371,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -2880,45 +2382,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2934,39 +2399,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -2976,21 +2416,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3000,11 +2427,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -3020,11 +2446,11 @@ PART
 	attRot0 = 0,1,0,-4.371139E-08
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
+	istg = 15
 	dstg = 13
-	sidx = 0
+	sidx = 1
 	sqor = 15
-	sepI = 13
+	sepI = 12
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -3051,7 +2477,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -3065,7 +2490,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -3077,22 +2501,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3120,12 +2531,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -3137,45 +2542,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3191,39 +2559,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3233,21 +2576,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3257,11 +2587,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -3277,11 +2606,11 @@ PART
 	attRot0 = 0,-0.5000001,0,0.8660254
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
+	istg = 15
 	dstg = 13
-	sidx = 1
+	sidx = 2
 	sqor = 15
-	sepI = 13
+	sepI = 12
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -3308,7 +2637,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -3322,7 +2650,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -3334,22 +2661,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3377,12 +2691,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -3394,45 +2702,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3448,39 +2719,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3490,21 +2736,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3514,11 +2747,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -3534,11 +2766,11 @@ PART
 	attRot0 = 0,0.8660254,0,0.5
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
+	istg = 15
 	dstg = 13
-	sidx = 1
+	sidx = 3
 	sqor = 15
-	sepI = 13
+	sepI = 12
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -3565,7 +2797,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -3579,7 +2810,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -3591,22 +2821,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3634,12 +2851,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -3651,45 +2862,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3705,39 +2879,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3747,21 +2896,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3771,11 +2907,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -3791,11 +2926,11 @@ PART
 	attRot0 = 0,-0.8660254,0,0.5000001
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
+	istg = 15
 	dstg = 13
-	sidx = 2
+	sidx = 4
 	sqor = 15
-	sepI = 13
+	sepI = 12
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -3822,7 +2957,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -3836,7 +2970,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -3848,22 +2981,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3891,12 +3011,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -3908,45 +3022,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -3962,39 +3039,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -4004,21 +3056,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -4028,11 +3067,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -4048,11 +3086,11 @@ PART
 	attRot0 = 0,0.5000001,0,0.8660254
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
+	istg = 15
 	dstg = 13
-	sidx = 2
+	sidx = 5
 	sqor = 15
-	sepI = 13
+	sepI = 12
 	attm = 0
 	modCost = 0
 	modMass = 0
@@ -4079,7 +3117,6 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
-		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -4093,7 +3130,6 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -4105,22 +3141,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4148,12 +3171,6 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
-		currentShowToggles = False
-		enableYaw = True
-		enablePitch = True
-		enableRoll = True
-		gimbalActive = False
-		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -4165,45 +3182,8 @@ PART
 			maxValue = 100
 			stepIncrement = 1
 		}
-		enableYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		enablePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		enableRoll_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ToggleToggles
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Actuation Toggles
-				guiName = Show Actuation Toggles
-				category = Actuation Toggles
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -4219,39 +3199,14 @@ PART
 			{
 				actionGroup = None
 			}
-			TogglePitchAction
-			{
-				actionGroup = None
-			}
-			ToggleYawAction
-			{
-				actionGroup = None
-			}
-			ToggleRollAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 	MODULE
 	{
 		name = ModuleAlternator
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -4261,21 +3216,8 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
@@ -4285,11 +3227,10 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.04
+		maxAmount = 0
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		isVisible = True
 		flowMode = Both
 	}
 }
@@ -4305,11 +3246,11 @@ PART
 	attRot0 = 1.75535E-07,-0.2588191,-4.703448E-08,-0.9659258
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 8
+	istg = 14
 	dstg = 12
 	sidx = 0
 	sqor = 14
-	sepI = 14
+	sepI = 13
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -4333,9 +3274,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = -7.290904
+		scaleFactor = -7.290909
 		height = -18.39639
-		stagingEnabled = True
 		towerRot = -1.75535E-07,0.2588191,4.703448E-08,-0.9659258
 		EVENTS
 		{
@@ -4343,22 +3283,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4378,14 +3305,12 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
-		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -4397,22 +3322,9 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4438,78 +3350,15 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4532,11 +3381,11 @@ PART
 	attRot0 = 1.285005E-07,-0.7071069,-1.285006E-07,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 8
+	istg = 14
 	dstg = 12
-	sidx = 0
+	sidx = 1
 	sqor = 14
-	sepI = 14
+	sepI = 13
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -4560,9 +3409,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = -7.290904
+		scaleFactor = -7.290909
 		height = -18.39639
-		stagingEnabled = True
 		towerRot = -1.285005E-07,0.7071068,1.285006E-07,-0.7071068
 		EVENTS
 		{
@@ -4570,22 +3418,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4605,14 +3440,12 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
-		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -4624,22 +3457,9 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4665,78 +3485,15 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4759,11 +3516,11 @@ PART
 	attRot0 = 4.703444E-08,-0.9659259,-1.75535E-07,-0.258819
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 8
+	istg = 14
 	dstg = 12
-	sidx = 0
+	sidx = 2
 	sqor = 14
-	sepI = 14
+	sepI = 13
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -4787,9 +3544,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = -7.290904
+		scaleFactor = -7.290909
 		height = -18.39639
-		stagingEnabled = True
 		towerRot = -4.703444E-08,0.9659259,1.75535E-07,-0.258819
 		EVENTS
 		{
@@ -4797,22 +3553,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4832,14 +3575,12 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
-		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -4851,22 +3592,9 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4892,78 +3620,15 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4986,11 +3651,11 @@ PART
 	attRot0 = -4.703448E-08,-0.9659258,-1.75535E-07,0.2588191
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 8
+	istg = 14
 	dstg = 12
-	sidx = 0
+	sidx = 3
 	sqor = 14
-	sepI = 14
+	sepI = 13
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -5014,9 +3679,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = -7.290904
+		scaleFactor = -7.290909
 		height = -18.39639
-		stagingEnabled = True
 		towerRot = 4.703448E-08,0.9659258,1.75535E-07,0.2588191
 		EVENTS
 		{
@@ -5024,22 +3688,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5059,14 +3710,12 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
-		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -5078,22 +3727,9 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5119,78 +3755,15 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5213,11 +3786,11 @@ PART
 	attRot0 = -1.285006E-07,-0.7071067,-1.285005E-07,0.7071069
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 8
+	istg = 14
 	dstg = 12
-	sidx = 0
+	sidx = 4
 	sqor = 14
-	sepI = 14
+	sepI = 13
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -5241,9 +3814,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = -7.290904
+		scaleFactor = -7.290909
 		height = -18.39639
-		stagingEnabled = True
 		towerRot = 1.285006E-07,0.7071067,1.285005E-07,0.7071069
 		EVENTS
 		{
@@ -5251,22 +3823,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5286,14 +3845,12 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
-		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -5305,22 +3862,9 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5346,78 +3890,15 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5440,11 +3921,11 @@ PART
 	attRot0 = -1.75535E-07,-0.258819,-4.703447E-08,0.9659259
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 8
+	istg = 14
 	dstg = 12
-	sidx = 0
+	sidx = 5
 	sqor = 14
-	sepI = 14
+	sepI = 13
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -5468,9 +3949,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = -7.290904
+		scaleFactor = -7.290909
 		height = -18.39639
-		stagingEnabled = True
 		towerRot = 1.75535E-07,0.258819,4.703447E-08,0.9659259
 		EVENTS
 		{
@@ -5478,22 +3958,9 @@ PART
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5513,14 +3980,12 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
-		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -5532,22 +3997,9 @@ PART
 			{
 				active = True
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5573,78 +4025,15 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
-		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
-				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		stagingEnabled = True
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiActiveUncommand = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
