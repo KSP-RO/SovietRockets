@@ -23,9 +23,6 @@ This mod contains my rockets that were originally part of the Soviet Probes mod.
 ##Install instructions:
 * Download and install mod from here
 
-* Install dependencies for KSP 1.2.x from here: https://www.dropbox.com/s/paqjbizbmxfhdqc/RN_Dependencies_KSP_v1.2.x.zip?dl=0
-* Install dependencies for KSP 1.3.x from here: https://www.dropbox.com/s/7yly4uu89bixvcl/RN_Dependencies_KSP_v1.3.x.zip?dl=0
-
 ##Credits:
 
 * Soyuz, Fregat1, some Proton stuff - Thorton & Igel - Used under authorization
